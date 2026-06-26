@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
-import { useRef } from "react";
+import { useRef, lazy, Suspense } from "react";
 import { ArrowUpRight, Mail, Linkedin } from "lucide-react";
 import logoAsset from "@/assets/av-logo.jpg.asset.json";
 import avLogoPng from "@/assets/av-logo.png";
 import { Reveal } from "@/components/SectionReveal";
-import { HeroOrb } from "@/components/HeroOrb";
+const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -129,7 +129,9 @@ function Hero() {
       style={{ background: "var(--gradient-hero)" }}
     >
       {/* 3D wireframe orb */}
-      <HeroOrb className="absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" />
+      <Suspense fallback={null}>
+        <HeroOrb className="absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" />
+      </Suspense>
 
       {/* Floating ornamental shapes */}
       <motion.div
