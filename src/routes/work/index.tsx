@@ -2,6 +2,10 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import avLogoPng from "@/assets/av-logo.png";
+import smartAlertsPreview from "@/assets/smart-alerts-preview.png";
+import forecastingPreview from "@/assets/forecasting-preview.png";
+import researchPreview from "@/assets/research-preview.png";
+import uworkPreview from "@/assets/uwork-preview.png";
 import { Reveal } from "@/components/SectionReveal";
 import { HeroOrb } from "@/components/HeroOrb";
 
@@ -26,28 +30,28 @@ const projects = [
     title: "Smart Alerts Redesign",
     summary: "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
     tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2-1.png",
+    image: smartAlertsPreview,
   },
   {
     id: "research",
     title: "Multi-Source Alerts Research",
     summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
     tags: ["UX Research", "Interviews", "Synthesis"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2.png",
+    image: researchPreview,
   },
   {
     id: "forecasting",
     title: "Alert Forecasting & AI Insights",
     summary: "Forecasting and AI insights for Spike Detection — helping users anticipate trends before they break.",
     tags: ["Data Viz", "AI Insights", "Feature Design"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/02/Macbook-Pro-FREE-1-1-1024x645.png",
+    image: forecastingPreview,
   },
   {
     id: "uwork",
     title: "uWork",
     summary: "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
     tags: ["Mobile", "0→1 Product", "Branding"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2025/11/Preview-1024x937.png",
+    image: uworkPreview,
   },
 ];
 
