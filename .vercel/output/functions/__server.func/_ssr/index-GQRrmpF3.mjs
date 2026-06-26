@@ -15,7 +15,7 @@ import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const HeroOrb = reactExports.lazy(() => import("./HeroOrb-CypnG1q9.mjs").then((m) => ({
+const HeroOrb = reactExports.lazy(() => import("./HeroOrb-1R49aztC.mjs").then((m) => ({
   default: m.HeroOrb
 })));
 const projects = [{
