@@ -22,7 +22,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2025",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2-1.png",
+    heroImage: "/smart-alerts-preview.png",
     overview:
       "Smart Alerts are a core Meltwater feature that automatically notify users about brand mentions, sentiment changes, industry events, and social engagement. Over time the alert ecosystem became increasingly complex — users struggled to understand the differences between alerts, the creation process was hard to navigate, and the management interface made it difficult to find or edit alerts. I led the redesign of two key parts: the Alert Picker (where users create alerts) and the Alerts Homepage (where users manage them). The goal was to simplify the system while supporting two very different user groups: self-serve users and Sales representatives managing enterprise clients.",
     stats: [
@@ -59,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2025",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-5.png",
+    heroImage: "/smart-alerts-preview.png",
     overview:
       "Mira is Meltwater's AI-powered assistant designed to simplify how users access media intelligence. By combining generative AI with intelligent agents, Mira transforms complex workflows — news monitoring, brand analysis, competitive intelligence — into a conversational experience. Instead of relying on complex Boolean searches, dashboard configuration, and manual analysis, users can ask questions in natural language and receive executive-ready insights in seconds. As part of Meltwater's first AI MVP initiative, I led the design of key product experiences that introduced conversational insights into the platform while ensuring they integrated seamlessly with existing workflows.",
     stats: [
@@ -71,7 +71,6 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "The Problem",
         body: "Before Mira, generating insights in Meltwater required deep platform expertise. Users had to construct precise Boolean queries, configure dashboards across multiple surfaces, and manually interpret results. For new users, this created a steep learning curve that slowed onboarding and limited adoption. Even experienced analysts were spending more time setting up analysis than actually analysing. The platform was powerful, but not intuitive.",
-        image: "https://alenavorobiev.com/wp-content/uploads/2026/03/personas_figma_ready-2-1024x512.png",
       },
       {
         heading: "Design Approach",
@@ -80,7 +79,6 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Key Features",
         body: "Mira Studio became the primary workspace for generating insights — users could ask questions about their brand, competitors, or industry trends and instantly receive structured reports, eliminating the need to manually build dashboards. The Prompt Library allowed users to save, organise, and reuse prompts for common analyses, turning individual knowledge into scalable team workflows. The Mira Companion embedded contextual prompts and insights directly into the platform based on what users were viewing, enabling action without leaving the current workflow.",
-        image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Designs-2.png",
       },
       {
         heading: "Outcome & Impact",
@@ -96,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2024",
     role: "UX Researcher & Designer",
     company: "Meltwater",
-    heroImage: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2.png",
+    heroImage: "/research-preview.png",
     overview:
       "Smart Alerts are a core capability that enables PR and marketing professionals to monitor brand activity, detect risks, and respond quickly to emerging trends. However, over time the experience had become more complicated and less structured — the result of ongoing feature expansion and accumulated backend constraints.\n\nRather than jump to solutions, we approached the problem holistically. I led a research initiative spanning five methods, culminating in a cross-functional workshop that translated findings into a prioritised product roadmap. The work ran in close collaboration with a Product Manager, UX researchers, and engineering partners.\n\nEach method provided a unique perspective on the ecosystem, enabling us to build a comprehensive understanding of user needs and system constraints.",
     stats: [
@@ -145,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2024",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "https://alenavorobiev.com/wp-content/uploads/2026/02/Macbook-Pro-FREE-1-1-1024x645.png",
+    heroImage: "/forecasting-preview.png",
     overview:
       "Organisations rely on media monitoring tools to react quickly to changes in conversation volume. But traditional spike alerts are reactive — they notify users only after a spike occurs, limiting the ability to prepare. This project introduced forecasting into spike detection alerts, enabling users to anticipate upcoming surges in mentions and understand the drivers behind them through AI-generated insights. My role focused on designing the forecast visualisation model, alert experience, and insight interpretation layer to support faster decision-making.",
     stats: [
@@ -161,17 +159,17 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Forecast Visualisation",
         body: "A predictive area was added to the chart showing expected mention volume beyond the current data point — including expected direction of conversation, potential spike severity, and a confidence range visualised as a shaded area. The visual language used: solid line for actual mentions, dashed line for trend baseline, shaded extension for forecast projection. For every 3 historical data points, the system generates 1 forecast point, producing a forward-looking trajectory that extends beyond real data. This separation prevented confusion between observed and predicted data.",
-        image: "https://alenavorobiev.com/wp-content/uploads/2026/02/Frame-1922-1-1-1024x638.png",
+        image: "/forecast-visualisation.png",
       },
       {
         heading: "AI Insights Layer",
         body: "To eliminate manual analysis, we introduced automated contextual insights directly inside the alert — surfacing sentiment shifts, top drivers of conversation, emerging topics and keywords, source type changes, and geographic concentration. The goal was to answer the user's first question immediately: 'Why is this happening?' We also surfaced the most impactful content related to each spike, ranked by reach and engagement, reducing the need to open the platform for initial investigation.",
-        image: "https://alenavorobiev.com/wp-content/uploads/2026/02/Insight-1-1-1024x814.png",
+        image: "/ai-insights-layer.png",
       },
       {
         heading: "Outcomes",
         body: "Alert engagement rate increased by 28%, indicating users found alerts more relevant and actionable with predictive context and AI summaries. Time to user action after an alert decreased by 33%, as users could immediately understand what was happening without investigating multiple dashboards first. Click-through to the platform from email improved by 19%. Customer interviews and feedback indicated significantly higher trust in alerts — users reported feeling more prepared to respond to emerging trends and communicate insights to leadership.",
-        image: "https://alenavorobiev.com/wp-content/uploads/2026/02/performance_improvements-3-1024x577.png",
+        image: "/forecasting-outcomes.png",
       },
     ],
     quote: {
@@ -187,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2023",
     role: "Lead UX/UI Designer",
     company: "uWork",
-    heroImage: "https://alenavorobiev.com/wp-content/uploads/2025/11/Preview-1024x937.png",
+    heroImage: "/uwork-preview.png",
     overview:
       "uWork is an iOS application built for self-employed tradespeople and small construction businesses — helping them track customers, projects, jobs, materials, expenses, and documents in one place. It monitors project timelines, contracted amounts, worker payments, and customer payments throughout project lifecycles. I owned research, user testing, wireframes, high-fidelity screens, and the prototype, collaborating closely with the CEO and a team of engineers to take the product from zero to launch.",
     stats: [
