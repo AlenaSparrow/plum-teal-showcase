@@ -22,7 +22,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2025",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "/smart-alerts-preview.png",
+    heroImage: "/smart-alerts-preview.jpg",
     overview:
       "Smart Alerts are a core Meltwater feature that automatically notify users about brand mentions, sentiment changes, industry events, and social engagement. Over time the alert ecosystem became increasingly complex — users struggled to understand the differences between alerts, the creation process was hard to navigate, and the management interface made it difficult to find or edit alerts. I led the redesign of two key parts: the Alert Picker (where users create alerts) and the Alerts Homepage (where users manage them). The goal was to simplify the system while supporting two very different user groups: self-serve users and Sales representatives managing enterprise clients.",
     stats: [
@@ -59,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2025",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "/smart-alerts-preview.png",
+    heroImage: "/smart-alerts-preview.jpg",
     overview:
       "Mira is Meltwater's AI-powered assistant designed to simplify how users access media intelligence. By combining generative AI with intelligent agents, Mira transforms complex workflows — news monitoring, brand analysis, competitive intelligence — into a conversational experience. Instead of relying on complex Boolean searches, dashboard configuration, and manual analysis, users can ask questions in natural language and receive executive-ready insights in seconds. As part of Meltwater's first AI MVP initiative, I led the design of key product experiences that introduced conversational insights into the platform while ensuring they integrated seamlessly with existing workflows.",
     stats: [
@@ -94,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2024",
     role: "UX Researcher & Designer",
     company: "Meltwater",
-    heroImage: "/research-preview.png",
+    heroImage: "/research-preview.jpg",
     overview:
       "Smart Alerts are a core capability that enables PR and marketing professionals to monitor brand activity, detect risks, and respond quickly to emerging trends. However, over time the experience had become more complicated and less structured — the result of ongoing feature expansion and accumulated backend constraints.\n\nRather than jump to solutions, we approached the problem holistically. I led a research initiative spanning five methods, culminating in a cross-functional workshop that translated findings into a prioritised product roadmap. The work ran in close collaboration with a Product Manager, UX researchers, and engineering partners.\n\nEach method provided a unique perspective on the ecosystem, enabling us to build a comprehensive understanding of user needs and system constraints.",
     stats: [
@@ -143,7 +143,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2024",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "/forecasting-preview.png",
+    heroImage: "/forecasting-preview.jpg",
     overview:
       "Organisations rely on media monitoring tools to react quickly to changes in conversation volume. But traditional spike alerts are reactive — they notify users only after a spike occurs, limiting the ability to prepare. This project introduced forecasting into spike detection alerts, enabling users to anticipate upcoming surges in mentions and understand the drivers behind them through AI-generated insights. My role focused on designing the forecast visualisation model, alert experience, and insight interpretation layer to support faster decision-making.",
     stats: [
@@ -185,7 +185,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2023",
     role: "Lead UX/UI Designer",
     company: "uWork",
-    heroImage: "/uwork-preview.png",
+    heroImage: "/uwork-preview.jpg",
     overview:
       "uWork is an iOS application built for self-employed tradespeople and small construction businesses — helping them track customers, projects, jobs, materials, expenses, and documents in one place. It monitors project timelines, contracted amounts, worker payments, and customer payments throughout project lifecycles. I owned research, user testing, wireframes, high-fidelity screens, and the prototype, collaborating closely with the CEO and a team of engineers to take the product from zero to launch.",
     stats: [
