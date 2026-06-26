@@ -1,10 +1,5 @@
 {
   "buildCommand": "bun run build",
   "outputDirectory": ".vercel/output",
-  "installCommand": "bun install",
-  "functions": {
-    "api/**": {
-      "runtime": "nodejs20.x"
-    }
-  }
+  "installCommand": "bun install"
 }
