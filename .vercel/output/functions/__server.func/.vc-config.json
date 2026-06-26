@@ -3,5 +3,6 @@
   "launcherType": "Nodejs",
   "shouldAddHelpers": false,
   "supportsResponseStreaming": false,
-  "runtime": "nodejs20.x"
+  "runtime": "nodejs20.x",
+  "maxDuration": 60
 }
