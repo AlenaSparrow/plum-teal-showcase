@@ -14,8 +14,19 @@ export default defineConfig({
   },
   nitro: {
     preset: "vercel",
-    rollupConfig: {
-      external: ["three"],
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        "/",
+        "/work",
+        "/work/smart-alerts",
+        "/work/mira",
+        "/work/research",
+        "/work/forecasting",
+        "/work/uwork",
+        "/about",
+        "/contact",
+      ],
     },
   },
 });

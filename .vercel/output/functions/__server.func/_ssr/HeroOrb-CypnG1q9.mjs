@@ -6,7 +6,7 @@ function HeroOrb({ className }) {
     if (!el) return;
     let frameId;
     let cleanupFn;
-    import("three").then((THREE) => {
+    import("../_libs/three.mjs").then((THREE) => {
       if (!mountRef.current) return;
       const w = el.clientWidth;
       const h = el.clientHeight;
