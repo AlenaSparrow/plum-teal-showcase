@@ -1,17 +1,19 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowUpRight, Mail, Linkedin } from "lucide-react";
 import logoAsset from "@/assets/av-logo.jpg.asset.json";
+import avLogoPng from "@/assets/av-logo.png";
 import { Reveal } from "@/components/SectionReveal";
+import { HeroOrb } from "@/components/HeroOrb";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Alena Vorobiev — UX Designer" },
-      { name: "description", content: "Senior UX designer crafting clear, trustworthy product experiences. Case studies in AI, alerts, and enterprise tooling." },
+      { name: "description", content: "UX designer crafting clear, trustworthy product experiences. Case studies in AI, alerts, and enterprise tooling." },
       { property: "og:title", content: "Alena Vorobiev — UX Designer" },
-      { property: "og:description", content: "Senior UX designer crafting clear, trustworthy product experiences." },
+      { property: "og:description", content: "UX designer crafting clear, trustworthy product experiences." },
       { property: "og:type", content: "website" },
     ],
     links: [
@@ -71,7 +73,6 @@ function Portfolio() {
     <div className="min-h-screen overflow-x-hidden">
       <Nav />
       <Hero />
-      <Marquee />
       <Work />
       <About />
       <Contact />
@@ -79,6 +80,7 @@ function Portfolio() {
     </div>
   );
 }
+
 
 function Nav() {
   return (
@@ -89,20 +91,23 @@ function Nav() {
       className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[color-mix(in_oklab,var(--ivory)_75%,transparent)] border-b border-border/50"
     >
       <div className="mx-auto max-w-7xl px-6 lg:px-10 h-16 flex items-center justify-between">
-        <a href="#top" className="font-display text-lg tracking-tight text-primary">
-          AV<span className="text-accent">.</span>
+        <a href="#top" className="flex items-center gap-4">
+          <img src={avLogoPng} alt="AV monogram" className="h-10 w-auto" />
+          <span className="w-px h-8 bg-primary/30" aria-hidden />
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-sm tracking-[0.2em] uppercase text-primary">
+              Alena Vorobiev
+            </span>
+            <span className="text-[0.65rem] tracking-[0.25em] uppercase text-accent mt-1">
+              UX Designer
+            </span>
+          </span>
         </a>
         <nav className="hidden md:flex items-center gap-10 text-sm">
-          <a href="#work" className="hover:text-primary transition-colors">Work</a>
-          <a href="#about" className="hover:text-primary transition-colors">About</a>
-          <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
+          <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+          <Link to="/about" className="hover:text-primary transition-colors">About</Link>
+          <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
         </nav>
-        <a
-          href="mailto:alena.n.vorobiev@gmail.com"
-          className="hidden md:inline-flex items-center gap-1.5 text-sm border border-primary/30 rounded-full px-4 py-2 hover:bg-primary hover:text-primary-foreground transition-colors"
-        >
-          Let's talk <ArrowUpRight className="size-3.5" />
-        </a>
       </div>
     </motion.header>
   );
@@ -123,6 +128,9 @@ function Hero() {
       className="relative pt-32 pb-24 lg:pt-44 lg:pb-32"
       style={{ background: "var(--gradient-hero)" }}
     >
+      {/* 3D wireframe orb */}
+      <HeroOrb className="absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" />
+
       {/* Floating ornamental shapes */}
       <motion.div
         aria-hidden
@@ -140,18 +148,8 @@ function Hero() {
       />
 
       <motion.div style={{ y, opacity }} className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease }}
-          className="inline-flex items-center gap-2 text-xs tracking-[0.25em] uppercase text-muted-foreground mb-8"
-        >
-          <span className="size-1.5 rounded-full bg-accent" />
-          Portfolio · 2026
-        </motion.div>
-
         <h1 className="font-display text-[clamp(2.75rem,8vw,7.5rem)] leading-[0.95] text-balance text-primary">
-          <AnimatedWords text="Designing calm" delay={0.1} />
+          <AnimatedWords text="Designing" delay={0.1} />
           <br />
           <span className="italic text-[color:var(--teal)]">
             <AnimatedWords text="clarity for" delay={0.35} />
@@ -168,8 +166,8 @@ function Hero() {
           className="mt-12 grid md:grid-cols-[1.2fr_1fr] gap-10 items-end"
         >
           <p className="text-lg md:text-xl max-w-xl text-foreground/80 leading-relaxed">
-            I'm <span className="text-primary font-medium">Alena Vorobiev</span>, a senior UX designer
-            shaping AI, data, and enterprise products that feel quiet, deliberate, and human.
+            I'm <span className="text-primary font-medium">Alena Vorobiev</span>, a UX designer
+            who makes AI, data, and enterprise products that feel intuitive.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -180,12 +178,12 @@ function Hero() {
               View selected work
               <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </a>
-            <a
-              href="#contact"
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-6 py-3.5 text-sm font-medium hover:border-primary transition-colors"
             >
               Get in touch
-            </a>
+            </Link>
           </div>
         </motion.div>
 
@@ -196,10 +194,10 @@ function Hero() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-border pt-8"
         >
           {[
-            ["7+", "Years designing"],
+            ["5+", "Years designing"],
             ["20+", "Shipped features"],
-            ["B2B SaaS", "Primary focus"],
-            ["AI · Data", "Specialism"],
+            ["End-to-End", "Experience"],
+            ["AI · Data · SaaS", "Specialism"],
           ].map(([k, v]) => (
             <div key={k}>
               <div className="font-display text-3xl text-primary">{k}</div>
@@ -262,16 +260,29 @@ function Work() {
           </div>
           <p className="text-muted-foreground max-w-sm">
             A short selection of recent product work — spanning enterprise AI, monitoring,
-            and the small craft details that make complex software feel calm.
+            and the small craft details that make complex software feel clear.
           </p>
         </div>
       </Reveal>
 
       <ul className="space-y-24 lg:space-y-32">
-        {projects.map((p, i) => (
-          <ProjectCard key={p.id} project={p} index={i} />
-        ))}
+        {projects
+          .filter((p) => ["smart-alerts", "research", "forecasting"].includes(p.id))
+          .map((p, i) => (
+            <ProjectCard key={p.id} project={p} index={i} />
+          ))}
       </ul>
+
+      <Reveal>
+        <div className="mt-20 text-center">
+          <Link
+            to="/work"
+            className="inline-flex items-center gap-2 rounded-full border border-primary/25 px-6 py-3.5 text-sm font-medium hover:border-primary hover:text-primary transition-colors"
+          >
+            View all case studies <ArrowUpRight className="size-4" />
+          </Link>
+        </div>
+      </Reveal>
     </section>
   );
 }
@@ -280,58 +291,65 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
   const flipped = index % 2 === 1;
   return (
     <Reveal as="li" y={48}>
-      <article
-        className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${flipped ? "lg:[&>*:first-child]:order-2" : ""}`}
-      >
-        <motion.div
-          whileHover={{ y: -6 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative rounded-2xl overflow-hidden bg-secondary aspect-[4/3] group"
-          style={{ boxShadow: "var(--shadow-card)" }}
+      <Link to="/work/$id" params={{ id: project.id }} className="group block">
+        <article
+          className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${flipped ? "lg:[&>*:first-child]:order-2" : ""}`}
         >
-          <img
-            src={project.image}
-            alt={project.title}
-            loading="lazy"
-            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-          />
-          <div className="absolute top-5 left-5 text-xs tracking-widest uppercase bg-background/80 backdrop-blur px-3 py-1.5 rounded-full">
-            {project.year}
+          <div className="relative">
+            {/* Offset background block */}
+            <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl" style={{ background: "var(--surface)" }} />
+            {/* Gold accent line */}
+            <div className="absolute -left-4 top-8 bottom-8 w-px bg-accent opacity-60" />
+            {/* Dot grid */}
+            <svg className="absolute -top-5 -left-5 opacity-25 pointer-events-none" width="64" height="64" viewBox="0 0 64 64" aria-hidden>
+              {Array.from({ length: 4 }).map((_, row) =>
+                Array.from({ length: 4 }).map((_, col) => (
+                  <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="1.5" fill="var(--plum)" />
+                ))
+              )}
+            </svg>
+            <motion.div
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className="relative rounded-2xl overflow-hidden bg-white aspect-[4/3]"
+              style={{ boxShadow: "var(--shadow-card)" }}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-contain transition-transform duration-700 group-hover:scale-[1.04]"
+              />
+            </motion.div>
           </div>
-        </motion.div>
 
-        <div>
-          <div className="text-xs tracking-[0.25em] uppercase text-accent mb-4">
-            Case Study · 0{index + 1}
-          </div>
-          <h3 className="font-display text-4xl md:text-5xl text-primary text-balance">
-            {project.title}
-          </h3>
-          <p className="mt-5 text-lg text-foreground/75 max-w-lg leading-relaxed">
-            {project.summary}
-          </p>
-          <div className="mt-7 flex flex-wrap gap-2">
-            {project.tags.map((t) => (
-              <span
-                key={t}
-                className="text-xs px-3 py-1.5 rounded-full border border-border bg-card text-muted-foreground"
-              >
-                {t}
+          <div>
+            <h3 className="font-display text-4xl md:text-5xl text-primary text-balance group-hover:text-[color:var(--teal)] transition-colors">
+              {project.title}
+            </h3>
+            <p className="mt-5 text-lg text-foreground/75 max-w-lg leading-relaxed">
+              {project.summary}
+            </p>
+            <div className="mt-7 flex flex-wrap gap-2">
+              {project.tags.map((t) => (
+                <span
+                  key={t}
+                  className="text-xs px-3 py-1.5 rounded-full border border-border bg-card text-muted-foreground"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+            <div className="mt-9 inline-flex items-center gap-2 text-primary font-medium">
+              <span className="relative">
+                Read the case study
+                <span className="absolute left-0 -bottom-0.5 h-px w-full bg-primary origin-left scale-x-100 transition-transform duration-300 group-hover:scale-x-0" />
               </span>
-            ))}
+              <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </div>
           </div>
-          <button
-            type="button"
-            className="mt-9 group inline-flex items-center gap-2 text-primary font-medium"
-          >
-            <span className="relative">
-              Read the case study
-              <span className="absolute left-0 -bottom-0.5 h-px w-full bg-primary origin-left scale-x-100 transition-transform duration-300 group-hover:scale-x-0" />
-            </span>
-            <ArrowUpRight className="size-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
-          </button>
-        </div>
-      </article>
+        </article>
+      </Link>
     </Reveal>
   );
 }
@@ -341,9 +359,6 @@ function About() {
     <section id="about" className="bg-secondary/60 py-28 lg:py-40">
       <div className="mx-auto max-w-7xl px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
         <Reveal className="lg:col-span-5">
-          <div className="text-xs tracking-[0.25em] uppercase text-muted-foreground mb-4">
-            About
-          </div>
           <h2 className="font-display text-5xl md:text-6xl text-primary text-balance">
             A designer who listens before she draws.
           </h2>
@@ -351,7 +366,7 @@ function About() {
         <div className="lg:col-span-7 space-y-6 text-lg leading-relaxed text-foreground/80">
           <Reveal delay={0.1}>
             <p>
-              I've spent the last seven years inside data-heavy products — from media monitoring
+              I've spent the last several years inside data-heavy products — from media monitoring
               and AI assistants to alert systems used by global enterprise teams. My favourite
               problems are the ones hiding in plain sight: the small frictions that erode trust
               one click at a time.
@@ -363,32 +378,6 @@ function About() {
               system glue in between. I'm happiest collaborating closely with PMs, researchers,
               and engineers to ship something measurable.
             </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="pt-6 grid sm:grid-cols-2 gap-8">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
-                  Practice
-                </div>
-                <ul className="space-y-1.5 text-base">
-                  <li>Product strategy</li>
-                  <li>Generative & evaluative research</li>
-                  <li>Interaction & visual design</li>
-                  <li>Design systems</li>
-                </ul>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-muted-foreground mb-3">
-                  Tools
-                </div>
-                <ul className="space-y-1.5 text-base">
-                  <li>Figma · FigJam</li>
-                  <li>Dovetail · Maze</li>
-                  <li>Protopie · Principle</li>
-                  <li>A bit of code</li>
-                </ul>
-              </div>
-            </div>
           </Reveal>
         </div>
       </div>
@@ -406,26 +395,16 @@ function Contact() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="font-display text-5xl md:text-7xl text-primary text-balance leading-[1]">
-            Have a product worth{" "}
-            <span className="italic text-[color:var(--teal)]">making calm?</span>
-          </h2>
-        </Reveal>
-        <Reveal delay={0.25}>
           <p className="mt-8 text-lg text-foreground/70 max-w-xl mx-auto">
-            I'm currently exploring senior and staff UX roles, plus selective consulting
-            for early-stage AI products.
+            I'm currently exploring UX and Senior UX Designer roles.
           </p>
         </Reveal>
         <Reveal delay={0.35}>
           <a
             href="mailto:alena.n.vorobiev@gmail.com"
-            className="mt-12 inline-flex items-center gap-3 font-display text-3xl md:text-5xl text-primary group"
+            className="mt-10 inline-flex items-center gap-2 rounded-full bg-primary text-primary-foreground px-8 py-4 text-base font-medium hover:bg-[color:var(--teal)] transition-colors"
           >
-            <span className="border-b border-primary/30 group-hover:border-primary transition-colors pb-1">
-              alena.n.vorobiev@gmail.com
-            </span>
-            <ArrowUpRight className="size-8 md:size-10 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            Get in touch <ArrowUpRight className="size-4" />
           </a>
         </Reveal>
       </div>
@@ -439,9 +418,9 @@ function Footer() {
       <div className="mx-auto max-w-7xl px-6 lg:px-10 py-12 flex flex-col md:flex-row gap-6 items-start md:items-center justify-between">
         <div className="flex items-center gap-4">
           <img
-            src={logoAsset.url}
+            src={avLogoPng}
             alt="Alena Vorobiev — UX Designer"
-            className="h-10 w-auto mix-blend-multiply"
+            className="h-10 w-auto"
           />
         </div>
         <div className="flex items-center gap-6 text-sm">
