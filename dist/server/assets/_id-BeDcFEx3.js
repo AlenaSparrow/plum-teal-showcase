@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ZoomIn, ArrowUpRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useCallback, useEffect } from "react";
 import { R as Reveal, a as avLogoPng } from "./SectionReveal-CPXu9wTK.js";
-import { R as Route, c as caseStudies } from "./router-A_20-8x4.js";
+import { R as Route, c as caseStudies } from "./router-DURnpheK.js";
 import "@tanstack/react-query";
 const researchAlertsStructure = "/assets/research-alerts-structure-DjBoMPI6.png";
 const saAlertSelection = "/assets/sa-alert-selection-BPaoawlP.png";

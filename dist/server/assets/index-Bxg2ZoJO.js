@@ -13,12 +13,6 @@ const projects = [{
   tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
   image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2-1.png"
 }, {
-  id: "mira",
-  title: "Mira Studio",
-  summary: "Meltwater's AI-powered assistant for media intelligence — conversational discovery for analysts.",
-  tags: ["AI Product", "Conversational UI", "Research"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-5.png"
-}, {
   id: "research",
   title: "Multi-Source Alerts Research",
   summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",

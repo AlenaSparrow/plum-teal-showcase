@@ -191,7 +191,7 @@ const Route$2 = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./index-D-NuL3Qn.js");
+const $$splitComponentImporter$1 = () => import("./index-Bxg2ZoJO.js");
 const Route$1 = createFileRoute("/work/")({
   head: () => ({
     meta: [{
@@ -373,7 +373,7 @@ const caseStudies = [
     ],
     quote: {
       text: "I wanted to share feedback on the new AI summary in Alerts — this feature is amazing. I don't have to dig through data anymore and can react so much faster. This week we had an important spike, and I was able to flag it to my manager right before a presentation so we could adjust in time. It honestly made a huge difference.",
-      attribution: "One of company clients*"
+      attribution: "One of company clients —"
     }
   },
   {
@@ -430,7 +430,7 @@ const caseStudies = [
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter = () => import("./_id-DtnsyHuX.js");
+const $$splitComponentImporter = () => import("./_id-BeDcFEx3.js");
 const Route = createFileRoute("/work/$id")({
   head: ({
     params
