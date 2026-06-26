@@ -4,6 +4,10 @@ import { useRef, lazy, Suspense } from "react";
 import { ArrowUpRight, Mail, Linkedin } from "lucide-react";
 import logoAsset from "@/assets/av-logo.jpg.asset.json";
 import avLogoPng from "@/assets/av-logo.png";
+import smartAlertsPreview from "@/assets/smart-alerts-preview.png";
+import researchPreview from "@/assets/research-preview.png";
+import forecastingPreview from "@/assets/forecasting-preview.png";
+import uworkPreview from "@/assets/uwork-preview.png";
 import { Reveal } from "@/components/SectionReveal";
 const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
 
@@ -31,7 +35,7 @@ const projects = [
     title: "Smart Alerts Redesign",
     summary: "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
     tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2-1.png",
+    image: smartAlertsPreview,
     year: "2025",
   },
   {
@@ -39,7 +43,7 @@ const projects = [
     title: "Mira Studio",
     summary: "Meltwater's AI-powered assistant for media intelligence — conversational discovery for analysts.",
     tags: ["AI Product", "Conversational UI", "Research"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-5.png",
+    image: smartAlertsPreview,
     year: "2025",
   },
   {
@@ -47,7 +51,7 @@ const projects = [
     title: "Multi-Source Alerts Research",
     summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
     tags: ["UX Research", "Interviews", "Synthesis"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2.png",
+    image: researchPreview,
     year: "2024",
   },
   {
@@ -55,7 +59,7 @@ const projects = [
     title: "Alert Forecasting & AI Insights",
     summary: "Forecasting and AI insights for Spike Detection — helping users anticipate trends before they break.",
     tags: ["Data Viz", "AI Insights", "Feature Design"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2026/02/Macbook-Pro-FREE-1-1-1024x645.png",
+    image: forecastingPreview,
     year: "2024",
   },
   {
@@ -63,7 +67,7 @@ const projects = [
     title: "uWork",
     summary: "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
     tags: ["Mobile", "0→1 Product", "Branding"],
-    image: "https://alenavorobiev.com/wp-content/uploads/2025/11/Preview-1024x937.png",
+    image: uworkPreview,
     year: "2023",
   },
 ];
