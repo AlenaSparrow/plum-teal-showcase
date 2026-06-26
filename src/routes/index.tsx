@@ -9,6 +9,7 @@ import researchPreview from "@/assets/research-preview.png";
 import forecastingPreview from "@/assets/forecasting-preview.png";
 import uworkPreview from "@/assets/uwork-preview.png";
 import { Reveal } from "@/components/SectionReveal";
+import { ClientOnly } from "@/components/ClientOnly";
 const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
 
 export const Route = createFileRoute("/")({
@@ -133,9 +134,11 @@ function Hero() {
       style={{ background: "var(--gradient-hero)" }}
     >
       {/* 3D wireframe orb */}
-      <Suspense fallback={null}>
-        <HeroOrb className="absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" />
-      </Suspense>
+      <ClientOnly>
+        <Suspense fallback={null}>
+          <HeroOrb className="absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" />
+        </Suspense>
+      </ClientOnly>
 
       {/* Floating ornamental shapes */}
       <motion.div

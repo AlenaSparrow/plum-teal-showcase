@@ -8,6 +8,7 @@ import researchPreview from "@/assets/research-preview.png";
 import uworkPreview from "@/assets/uwork-preview.png";
 import { lazy, Suspense } from "react";
 import { Reveal } from "@/components/SectionReveal";
+import { ClientOnly } from "@/components/ClientOnly";
 const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
 
 export const Route = createFileRoute("/work/")({
@@ -71,9 +72,11 @@ function WorkPage() {
             </h1>
           </Reveal>
           <div className="hidden lg:block relative h-64">
-            <Suspense fallback={null}>
-              <HeroOrb />
-            </Suspense>
+            <ClientOnly>
+              <Suspense fallback={null}>
+                <HeroOrb />
+              </Suspense>
+            </ClientOnly>
           </div>
         </div>
 

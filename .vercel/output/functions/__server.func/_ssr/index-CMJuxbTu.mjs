@@ -1,7 +1,7 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
 import { a as avLogoPng, R as Reveal } from "./SectionReveal-CPXu9wTK.mjs";
-import { s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./uwork-preview-vlgTVRFR.mjs";
+import { C as ClientOnly, s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./ClientOnly-CVLlN9s1.mjs";
 import { m as motion, u as useScroll, a as useTransform } from "../_libs/framer-motion.mjs";
 import { A as ArrowUpRight, M as Mail, L as Linkedin } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
@@ -15,7 +15,7 @@ import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const HeroOrb = reactExports.lazy(() => import("./HeroOrb-9tJU4RQY.mjs").then((m) => ({
+const HeroOrb = reactExports.lazy(() => import("./HeroOrb-CypnG1q9.mjs").then((m) => ({
   default: m.HeroOrb
 })));
 const projects = [{
@@ -104,7 +104,7 @@ function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "top", ref, className: "relative pt-32 pb-24 lg:pt-44 lg:pb-32", style: {
     background: "var(--gradient-hero)"
   }, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: null, children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, { className: "absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(ClientOnly, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: null, children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, { className: "absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(motion.div, { "aria-hidden": true, className: "absolute top-32 right-[8%] size-64 rounded-full blur-3xl opacity-40", style: {
       background: "var(--surface)"
     }, animate: {

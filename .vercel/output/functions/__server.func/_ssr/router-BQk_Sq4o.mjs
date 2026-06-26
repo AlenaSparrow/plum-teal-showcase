@@ -168,7 +168,7 @@ const Route$3 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-C7b2iO0I.mjs");
+const $$splitComponentImporter$2 = () => import("./index-CMJuxbTu.mjs");
 const Route$2 = createFileRoute("/")({
   head: () => ({
     meta: [{
@@ -200,7 +200,7 @@ const Route$2 = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./index-JP79Hmoh.mjs");
+const $$splitComponentImporter$1 = () => import("./index-CjkuOwrp.mjs");
 const Route$1 = createFileRoute("/work/")({
   head: () => ({
     meta: [{
@@ -437,7 +437,7 @@ const caseStudies = [
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter = () => import("../_id-DMxOFfgp.mjs");
+const $$splitComponentImporter = () => import("../_id-so3_rg3X.mjs");
 const Route = createFileRoute("/work/$id")({
   head: ({
     params

@@ -1,51 +1,41 @@
-import { useEffect, useRef } from "react";
-
-export function HeroOrb({ className }: { className?: string }) {
-  const mountRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
+import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
+function HeroOrb({ className }) {
+  const mountRef = reactExports.useRef(null);
+  reactExports.useEffect(() => {
     const el = mountRef.current;
     if (!el) return;
-
-    let frameId: number;
-    let cleanupFn: (() => void) | undefined;
-
+    let frameId;
+    let cleanupFn;
     import("three").then((THREE) => {
       if (!mountRef.current) return;
-
       const w = el.clientWidth;
       const h = el.clientHeight;
-
       const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       renderer.setSize(w, h);
-      renderer.setClearColor(0x000000, 0);
+      renderer.setClearColor(0, 0);
       el.appendChild(renderer.domElement);
-
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
       camera.position.set(0, 0, 4.5);
-
       const geoSphere = new THREE.IcosahedronGeometry(1.5, 4);
       const matSphere = new THREE.MeshBasicMaterial({
-        color: 0x4a365f,
+        color: 4863583,
         wireframe: true,
         transparent: true,
-        opacity: 0.45,
+        opacity: 0.45
       });
       const sphere = new THREE.Mesh(geoSphere, matSphere);
       scene.add(sphere);
-
       const geoInner = new THREE.IcosahedronGeometry(0.95, 2);
       const matInner = new THREE.MeshBasicMaterial({
-        color: 0xd6b36a,
+        color: 14070634,
         wireframe: true,
         transparent: true,
-        opacity: 0.35,
+        opacity: 0.35
       });
       const inner = new THREE.Mesh(geoInner, matInner);
       scene.add(inner);
-
       const onResize = () => {
         const nw = el.clientWidth;
         const nh = el.clientHeight;
@@ -54,7 +44,6 @@ export function HeroOrb({ className }: { className?: string }) {
         renderer.setSize(nw, nh);
       };
       window.addEventListener("resize", onResize);
-
       const clock = new THREE.Clock();
       const animate = () => {
         frameId = requestAnimationFrame(animate);
@@ -66,7 +55,6 @@ export function HeroOrb({ className }: { className?: string }) {
         renderer.render(scene, camera);
       };
       animate();
-
       cleanupFn = () => {
         cancelAnimationFrame(frameId);
         window.removeEventListener("resize", onResize);
@@ -74,9 +62,10 @@ export function HeroOrb({ className }: { className?: string }) {
         if (el.contains(renderer.domElement)) el.removeChild(renderer.domElement);
       };
     });
-
     return () => cleanupFn?.();
   }, []);
-
-  return <div ref={mountRef} className={className} />;
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref: mountRef, className });
 }
+export {
+  HeroOrb
+};
