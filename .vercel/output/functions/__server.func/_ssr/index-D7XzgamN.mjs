@@ -1,7 +1,7 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
 import { a as avLogoPng, R as Reveal } from "./SectionReveal-CPXu9wTK.mjs";
-import { H as HeroOrb } from "./HeroOrb-jEL9p31l.mjs";
+import { s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./uwork-preview-IsHcLBuD.mjs";
 import { m as motion, u as useScroll, a as useTransform } from "../_libs/framer-motion.mjs";
 import { A as ArrowUpRight, M as Mail, L as Linkedin } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
@@ -13,43 +13,45 @@ import "node:stream/web";
 import "node:stream";
 import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
-import "../_libs/three.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
+const HeroOrb = reactExports.lazy(() => import("./HeroOrb-9tJU4RQY.mjs").then((m) => ({
+  default: m.HeroOrb
+})));
 const projects = [{
   id: "smart-alerts",
   title: "Smart Alerts Redesign",
   summary: "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
   tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2-1.png",
+  image: smartAlertsPreview,
   year: "2025"
 }, {
   id: "mira",
   title: "Mira Studio",
   summary: "Meltwater's AI-powered assistant for media intelligence — conversational discovery for analysts.",
   tags: ["AI Product", "Conversational UI", "Research"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-5.png",
+  image: smartAlertsPreview,
   year: "2025"
 }, {
   id: "research",
   title: "Multi-Source Alerts Research",
   summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
   tags: ["UX Research", "Interviews", "Synthesis"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2026/03/Macbook-Pro-FREE-2.png",
+  image: researchPreview,
   year: "2024"
 }, {
   id: "forecasting",
   title: "Alert Forecasting & AI Insights",
   summary: "Forecasting and AI insights for Spike Detection — helping users anticipate trends before they break.",
   tags: ["Data Viz", "AI Insights", "Feature Design"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2026/02/Macbook-Pro-FREE-1-1-1024x645.png",
+  image: forecastingPreview,
   year: "2024"
 }, {
   id: "uwork",
   title: "uWork",
   summary: "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
   tags: ["Mobile", "0→1 Product", "Branding"],
-  image: "https://alenavorobiev.com/wp-content/uploads/2025/11/Preview-1024x937.png",
+  image: uworkPreview,
   year: "2023"
 }];
 function Portfolio() {
@@ -102,7 +104,7 @@ function Hero() {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("section", { id: "top", ref, className: "relative pt-32 pb-24 lg:pt-44 lg:pb-32", style: {
     background: "var(--gradient-hero)"
   }, children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, { className: "absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: null, children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, { className: "absolute inset-y-0 right-0 w-[55%] opacity-70 pointer-events-none hidden lg:block" }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(motion.div, { "aria-hidden": true, className: "absolute top-32 right-[8%] size-64 rounded-full blur-3xl opacity-40", style: {
       background: "var(--surface)"
     }, animate: {

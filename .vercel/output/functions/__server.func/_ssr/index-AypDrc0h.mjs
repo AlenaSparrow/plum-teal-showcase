@@ -1,7 +1,7 @@
-import { j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./SectionReveal-CPXu9wTK.mjs";
-import { H as HeroOrb } from "./HeroOrb-jEL9p31l.mjs";
+import { s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./uwork-preview-IsHcLBuD.mjs";
 import { m as motion } from "../_libs/framer-motion.mjs";
 import { A as ArrowUpRight } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
@@ -13,13 +13,11 @@ import "node:stream/web";
 import "node:stream";
 import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
-import "../_libs/three.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const smartAlertsPreview = "/assets/smart-alerts-preview-BlPnYbdI.png";
-const forecastingPreview = "/assets/forecasting-preview-BjuRAdWK.png";
-const researchPreview = "/assets/research-preview-DcuXUy7U.png";
-const uworkPreview = "/assets/uwork-preview-D4BPvDN6.png";
+const HeroOrb = reactExports.lazy(() => import("./HeroOrb-9tJU4RQY.mjs").then((m) => ({
+  default: m.HeroOrb
+})));
 const projects = [{
   id: "smart-alerts",
   title: "Smart Alerts Redesign",
@@ -54,7 +52,7 @@ function WorkPage() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-xs tracking-[0.25em] uppercase text-muted-foreground mb-4", children: "Portfolio" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "font-display text-5xl md:text-6xl text-primary max-w-2xl text-balance", children: "A selection of product design work." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden lg:block relative h-64", children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, {}) })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden lg:block relative h-64", children: /* @__PURE__ */ jsxRuntimeExports.jsx(reactExports.Suspense, { fallback: null, children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeroOrb, {}) }) })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "space-y-24 lg:space-y-32", children: projects.map((p, i) => /* @__PURE__ */ jsxRuntimeExports.jsx(ProjectCard, { project: p, index: i }, p.id)) })
     ] })

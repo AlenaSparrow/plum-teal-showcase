@@ -2,6 +2,6 @@
   "handler": "index.mjs",
   "launcherType": "Nodejs",
   "shouldAddHelpers": false,
-  "supportsResponseStreaming": true,
-  "runtime": "bun1.x"
+  "supportsResponseStreaming": false,
+  "runtime": "nodejs20.x"
 }

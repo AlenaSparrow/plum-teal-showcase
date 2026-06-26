@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route, c as caseStudies } from "./_ssr/router-BRoxa0er.mjs";
+import { R as Route, c as caseStudies } from "./_ssr/router-Cm8pyGQx.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";

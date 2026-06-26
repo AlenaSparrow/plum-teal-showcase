@@ -65,5 +65,5 @@ function HeroOrb({ className }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { ref: mountRef, className });
 }
 export {
-  HeroOrb as H
+  HeroOrb
 };
