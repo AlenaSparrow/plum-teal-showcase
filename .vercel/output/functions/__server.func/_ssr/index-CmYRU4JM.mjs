@@ -21,7 +21,7 @@ function ClientOnly({ children }) {
   if (!mounted) return null;
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children });
 }
-const HeroOrb = reactExports.lazy(() => import("./HeroOrb-1R49aztC.mjs").then((m) => ({
+const HeroOrb = reactExports.lazy(() => import("./HeroOrb-CypnG1q9.mjs").then((m) => ({
   default: m.HeroOrb
 })));
 const projects = [{
