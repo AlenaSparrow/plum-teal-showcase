@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route, c as caseStudies } from "./_ssr/router-Bn3m05UZ.mjs";
+import { R as Route, c as caseStudies } from "./_ssr/router-CJb_Nwcz.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";
@@ -164,11 +164,13 @@ function CaseStudyPage() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(VideoOverlay, { src: videoOverlay, onClose: () => setVideoOverlay(null) })
   ] });
 }
+const VISIBLE_ORDER = ["smart-alerts", "research", "forecasting", "uwork"];
 function NextProject({
   currentId
 }) {
-  const idx = caseStudies.findIndex((c) => c.id === currentId);
-  const next = caseStudies[(idx + 1) % caseStudies.length];
+  const visible = caseStudies.filter((c) => VISIBLE_ORDER.includes(c.id)).sort((a, b) => VISIBLE_ORDER.indexOf(a.id) - VISIBLE_ORDER.indexOf(b.id));
+  const idx = visible.findIndex((c) => c.id === currentId);
+  const next = visible[(idx + 1) % visible.length];
   return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-border overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/work/$id", params: {
     id: next.id
   }, className: "group block", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-7xl px-6 lg:px-10 py-16 lg:py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Reveal, { children: [

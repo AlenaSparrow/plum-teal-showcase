@@ -272,9 +272,12 @@ function CaseStudyPage() {
   );
 }
 
+const VISIBLE_ORDER = ["smart-alerts", "research", "forecasting", "uwork"];
+
 function NextProject({ currentId }: { currentId: string }) {
-  const idx = caseStudies.findIndex((c) => c.id === currentId);
-  const next = caseStudies[(idx + 1) % caseStudies.length];
+  const visible = caseStudies.filter((c) => VISIBLE_ORDER.includes(c.id)).sort((a, b) => VISIBLE_ORDER.indexOf(a.id) - VISIBLE_ORDER.indexOf(b.id));
+  const idx = visible.findIndex((c) => c.id === currentId);
+  const next = visible[(idx + 1) % visible.length];
 
   return (
     <section className="border-t border-border overflow-hidden">

@@ -437,7 +437,7 @@ const caseStudies = [
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter = () => import("../_id-nDX-oY_a.mjs");
+const $$splitComponentImporter = () => import("../_id-CzrMtZEF.mjs");
 const Route = createFileRoute("/work/$id")({
   head: ({
     params
