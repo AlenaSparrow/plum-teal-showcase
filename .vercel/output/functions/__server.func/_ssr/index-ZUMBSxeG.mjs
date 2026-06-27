@@ -1,7 +1,7 @@
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
 import { a as avLogoPng, R as Reveal } from "./SectionReveal-CPXu9wTK.mjs";
-import { C as ClientOnly, s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./ClientOnly-DclDJw07.mjs";
+import { s as smartAlertsPreview, r as researchPreview, f as forecastingPreview, u as uworkPreview } from "./uwork-preview-rfTsAQ2u.mjs";
 import { m as motion, u as useScroll, a as useTransform } from "../_libs/framer-motion.mjs";
 import { A as ArrowUpRight, M as Mail, L as Linkedin } from "../_libs/lucide-react.mjs";
 import "../_libs/tanstack__router-core.mjs";
@@ -15,6 +15,12 @@ import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
+function ClientOnly({ children }) {
+  const [mounted, setMounted] = reactExports.useState(false);
+  reactExports.useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children });
+}
 const HeroOrb = reactExports.lazy(() => import("./HeroOrb-1R49aztC.mjs").then((m) => ({
   default: m.HeroOrb
 })));

@@ -1,4 +1,4 @@
-import{j as o}from"./index-Cxnd0_YI.js";function i({className:s}){return o.jsx("div",{className:s,"aria-hidden":!0,children:o.jsxs("svg",{viewBox:"0 0 400 400",xmlns:"http://www.w3.org/2000/svg",className:"w-full h-full",style:{overflow:"visible"},children:[o.jsx("style",{children:`
+import{j as o}from"./index-ZB9ceu2P.js";function i({className:s}){return o.jsx("div",{className:s,"aria-hidden":!0,children:o.jsxs("svg",{viewBox:"0 0 400 400",xmlns:"http://www.w3.org/2000/svg",className:"w-full h-full",style:{overflow:"visible"},children:[o.jsx("style",{children:`
           @keyframes orb-spin-slow {
             from { transform: rotate(0deg); }
             to { transform: rotate(360deg); }

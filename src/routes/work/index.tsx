@@ -6,10 +6,7 @@ import smartAlertsPreview from "@/assets/smart-alerts-preview.jpg";
 import forecastingPreview from "@/assets/forecasting-preview.jpg";
 import researchPreview from "@/assets/research-preview.jpg";
 import uworkPreview from "@/assets/uwork-preview.jpg";
-import { lazy, Suspense } from "react";
 import { Reveal } from "@/components/SectionReveal";
-import { ClientOnly } from "@/components/ClientOnly";
-const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
 
 export const Route = createFileRoute("/work/")({
   head: () => ({
@@ -71,13 +68,7 @@ function WorkPage() {
               A selection of product design work.
             </h1>
           </Reveal>
-          <div className="hidden lg:block relative h-64">
-            <ClientOnly>
-              <Suspense fallback={null}>
-                <HeroOrb />
-              </Suspense>
-            </ClientOnly>
-          </div>
+          <div className="hidden lg:block relative h-64" />
         </div>
 
         <ul className="space-y-24 lg:space-y-32">
