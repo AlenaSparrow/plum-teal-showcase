@@ -171,6 +171,7 @@ function Nav() {
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm">
           <Link to="/work" className="transition-opacity hover:opacity-100 opacity-60" style={{ color: "var(--ivory)" }}>Work</Link>
+          <Link to="/articles" className="transition-opacity hover:opacity-100 opacity-60" style={{ color: "var(--ivory)" }}>Writing</Link>
           <Link to="/about" className="transition-opacity hover:opacity-100 opacity-60" style={{ color: "var(--ivory)" }}>About</Link>
           <Link to="/contact" className="font-medium" style={{ color: "var(--ivory)" }}>Contact</Link>
         </nav>

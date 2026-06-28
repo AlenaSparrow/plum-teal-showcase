@@ -1,7 +1,7 @@
 import { j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { b as Route, a as articles } from "./_ssr/router-DBrNQgtr.mjs";
+import { b as Route, a as articles } from "./_ssr/router-ztFuWovQ.mjs";
 import { b as ArrowLeft, e as ArrowRight } from "./_libs/lucide-react.mjs";
 import { m as motion } from "./_libs/framer-motion.mjs";
 import "./_libs/tanstack__router-core.mjs";

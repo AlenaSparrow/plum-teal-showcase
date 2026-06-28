@@ -324,6 +324,7 @@ function Nav() {
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm">
           <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+          <Link to="/articles" className="hover:text-primary transition-colors">Writing</Link>
           <Link to="/about" className="hover:text-primary transition-colors">About</Link>
           <a href="mailto:alena.n.vorobiev@gmail.com" className="hover:text-primary transition-colors">Contact</a>
         </nav>

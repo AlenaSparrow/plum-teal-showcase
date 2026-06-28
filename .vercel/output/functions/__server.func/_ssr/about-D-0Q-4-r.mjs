@@ -109,6 +109,7 @@ function Nav() {
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden md:flex items-center gap-10 text-sm", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/work", className: "hover:text-primary transition-colors", children: "Work" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/articles", className: "hover:text-primary transition-colors", children: "Writing" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "text-primary font-medium", children: "About" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/contact", className: "hover:text-primary transition-colors", children: "Contact" })
     ] })

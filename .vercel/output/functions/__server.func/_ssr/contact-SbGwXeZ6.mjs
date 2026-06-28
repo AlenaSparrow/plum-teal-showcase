@@ -133,6 +133,9 @@ function Nav() {
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/work", className: "transition-opacity hover:opacity-100 opacity-60", style: {
         color: "var(--ivory)"
       }, children: "Work" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/articles", className: "transition-opacity hover:opacity-100 opacity-60", style: {
+        color: "var(--ivory)"
+      }, children: "Writing" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Link, { to: "/about", className: "transition-opacity hover:opacity-100 opacity-60", style: {
         color: "var(--ivory)"
       }, children: "About" }),

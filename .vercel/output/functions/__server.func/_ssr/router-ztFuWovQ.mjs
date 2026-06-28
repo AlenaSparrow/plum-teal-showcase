@@ -122,7 +122,7 @@ const $$splitComponentImporter$7 = () => import("./work-BFsOu0JM.mjs");
 const Route$7 = createFileRoute("/work")({
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
-const $$splitComponentImporter$6 = () => import("./contact-kgrWoWrD.mjs");
+const $$splitComponentImporter$6 = () => import("./contact-SbGwXeZ6.mjs");
 const Route$6 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -145,7 +145,7 @@ const Route$6 = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-const $$splitComponentImporter$5 = () => import("./about-D8zrqhwH.mjs");
+const $$splitComponentImporter$5 = () => import("./about-D-0Q-4-r.mjs");
 const Route$5 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -168,7 +168,7 @@ const Route$5 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-const $$splitComponentImporter$4 = () => import("./index-CmYRU4JM.mjs");
+const $$splitComponentImporter$4 = () => import("./index-Byf3DpnN.mjs");
 const Route$4 = createFileRoute("/")({
   head: () => ({
     meta: [{
@@ -200,7 +200,7 @@ const Route$4 = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./index-BpYPFVrB.mjs");
+const $$splitComponentImporter$3 = () => import("./index-BK_BsUu-.mjs");
 const Route$3 = createFileRoute("/work/")({
   head: () => ({
     meta: [{
@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-BLH06GHy.mjs");
+const $$splitComponentImporter$2 = () => import("./index-BPCymSe0.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -460,7 +460,7 @@ const caseStudies = [
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-aNxJonKu.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-r_7bOeiW.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -888,7 +888,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-Cc3e9Tm-.mjs");
+const $$splitComponentImporter = () => import("../_slug-B7gAGhpn.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params

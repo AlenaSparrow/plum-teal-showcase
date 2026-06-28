@@ -110,6 +110,7 @@ function Nav() {
         </a>
         <nav className="hidden md:flex items-center gap-10 text-sm">
           <Link to="/work" className="hover:text-primary transition-colors">Work</Link>
+          <Link to="/articles" className="hover:text-primary transition-colors">Writing</Link>
           <Link to="/about" className="hover:text-primary transition-colors">About</Link>
           <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
         </nav>
