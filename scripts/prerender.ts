@@ -11,6 +11,11 @@ const ROUTES = [
   "/work/uwork",
   "/about",
   "/contact",
+  "/articles",
+  "/articles/part-1-why-im-documenting",
+  "/articles/part-2-from-first-draft",
+  "/articles/part-3-getting-it-live",
+  "/articles/part-4-what-i-learned",
 ];
 
 const PORT = 3999;
