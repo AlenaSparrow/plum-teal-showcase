@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route, c as caseStudies } from "./_ssr/router-CJb_Nwcz.mjs";
+import { R as Route$1, c as caseStudies } from "./_ssr/router-DBrNQgtr.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";
@@ -37,7 +37,7 @@ const surveySlide2 = "/assets/survey-slide2-C-S3LyiY.png";
 const surveySlide3 = "/assets/survey-slide3-huQDZNtc.png";
 const surveySlide4 = "/assets/survey-slide4-CV_pENDy.png";
 function CaseStudyPage() {
-  const cs = Route.useLoaderData();
+  const cs = Route$1.useLoaderData();
   const [lightbox, setLightbox] = reactExports.useState(null);
   const openLightbox = reactExports.useCallback((images, index = 0) => setLightbox({
     images,
