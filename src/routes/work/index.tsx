@@ -6,6 +6,7 @@ import smartAlertsPreview from "@/assets/smart-alerts-preview.jpg";
 import forecastingPreview from "@/assets/forecasting-preview.jpg";
 import researchPreview from "@/assets/research-preview.jpg";
 import uworkPreview from "@/assets/uwork-preview.jpg";
+import miraPreview from "@/assets/mira-preview.jpg";
 import { Reveal } from "@/components/SectionReveal";
 
 export const Route = createFileRoute("/work/")({
@@ -37,6 +38,13 @@ const projects = [
     summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
     tags: ["UX Research", "Interviews", "Synthesis"],
     image: researchPreview,
+  },
+  {
+    id: "mira",
+    title: "Mira Studio",
+    summary: "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
+    tags: ["AI Product", "Conversational UI", "0→1"],
+    image: miraPreview,
   },
   {
     id: "forecasting",

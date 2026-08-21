@@ -185,13 +185,16 @@ function CaseStudyPage() {
 
                 {/* Right: body + image */}
                 <div className="lg:col-span-8 space-y-10">
-                  <div className={section.video ? "flex gap-10 items-center" : ""}>
+                  <div className="space-y-8">
+                    <div className="text-lg leading-[1.8] text-foreground/80 space-y-5">
+                      {section.body.split("\n\n").map((para, j) => (
+                        <p key={j}>{para}</p>
+                      ))}
+                    </div>
                     {section.video && (
-                      <button
-                        onClick={() => setVideoOverlay(section.video!)}
-                        className="group shrink-0 rounded-2xl overflow-hidden bg-black w-72 relative"
+                      <div
+                        className="rounded-2xl overflow-hidden bg-black w-full lg:max-w-2xl"
                         style={{ boxShadow: "var(--shadow-card)" }}
-                        aria-label="Play video fullscreen"
                       >
                         <video
                           src={section.video}
@@ -199,18 +202,11 @@ function CaseStudyPage() {
                           loop
                           muted
                           playsInline
+                          controls
                           className="w-full h-auto"
                         />
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
-                          <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
-                        </div>
-                      </button>
+                      </div>
                     )}
-                    <div className="text-lg leading-[1.8] text-foreground/80 space-y-5 flex-1">
-                      {section.body.split("\n\n").map((para, j) => (
-                        <p key={j}>{para}</p>
-                      ))}
-                    </div>
                   </div>
                   {section.chartId && <ChartBlock chartId={section.chartId} onOpenImage={(imgs, i) => openLightbox(imgs, i)} />}
                   {section.image && (
@@ -272,7 +268,7 @@ function CaseStudyPage() {
   );
 }
 
-const VISIBLE_ORDER = ["smart-alerts", "research", "forecasting", "uwork"];
+const VISIBLE_ORDER = ["smart-alerts", "research", "mira", "forecasting", "uwork"];
 
 function NextProject({ currentId }: { currentId: string }) {
   const visible = caseStudies.filter((c) => VISIBLE_ORDER.includes(c.id)).sort((a, b) => VISIBLE_ORDER.indexOf(a.id) - VISIBLE_ORDER.indexOf(b.id));

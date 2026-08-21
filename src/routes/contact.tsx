@@ -117,11 +117,11 @@ function ContactPage() {
             <div className="flex items-center gap-3">
               <Phone className="size-4 shrink-0" style={{ color: "color-mix(in oklab, var(--ivory) 45%, transparent)" }} />
               <a
-                href="tel:+16506395232"
+                href="tel:+16502168758"
                 className="text-lg tracking-wide transition-opacity hover:opacity-80"
                 style={{ color: "color-mix(in oklab, var(--ivory) 60%, transparent)" }}
               >
-                +1 650 639 5232
+                +1 650 216 8758
               </a>
             </div>
 

@@ -55,34 +55,44 @@ export const caseStudies: CaseStudy[] = [
     id: "mira",
     title: "Mira Studio",
     tagline: "Meltwater's AI-powered assistant — transforming complex media intelligence workflows into a conversational experience.",
-    tags: ["AI Product", "Conversational UI", "Research"],
+    tags: ["AI Product", "Conversational UI", "0→1"],
     year: "2025",
     role: "Lead UX Designer",
     company: "Meltwater",
-    heroImage: "/smart-alerts-preview.jpg",
+    heroImage: "/mira-preview.jpg",
     overview:
       "Mira is Meltwater's AI-powered assistant designed to simplify how users access media intelligence. By combining generative AI with intelligent agents, Mira transforms complex workflows — news monitoring, brand analysis, competitive intelligence — into a conversational experience. Instead of relying on complex Boolean searches, dashboard configuration, and manual analysis, users can ask questions in natural language and receive executive-ready insights in seconds. As part of Meltwater's first AI MVP initiative, I led the design of key product experiences that introduced conversational insights into the platform while ensuring they integrated seamlessly with existing workflows.",
     stats: [
       { value: "0→1", label: "Full AI product build" },
       { value: "Hours→Seconds", label: "Time to insight" },
-      { value: "2025", label: "Year shipped" },
     ],
     sections: [
       {
         heading: "The Problem",
-        body: "Before Mira, generating insights in Meltwater required deep platform expertise. Users had to construct precise Boolean queries, configure dashboards across multiple surfaces, and manually interpret results. For new users, this created a steep learning curve that slowed onboarding and limited adoption. Even experienced analysts were spending more time setting up analysis than actually analysing. The platform was powerful, but not intuitive.",
+        body: "Before Mira, generating insights in Meltwater required deep platform expertise. Users had to construct precise Boolean queries, configure dashboards across multiple surfaces, and manually interpret results. Even for experienced users, this process was time-intensive and often repetitive. For new users, it created a steep learning curve that slowed onboarding and limited product adoption.\n\nAs a result, valuable features were underutilised, and teams struggled to quickly extract actionable insights. The platform was powerful, but not intuitive — users were spending more time setting up analysis than actually analysing.",
+      },
+      {
+        heading: "Goal",
+        body: "Our goal was to redesign the experience around speed, accessibility, and user intent. We aimed to reduce time-to-insight from hours to seconds, eliminate the need for Boolean expertise, and create a system that could support both first-time users and advanced analysts. Just as importantly, the solution needed to integrate seamlessly into the existing Meltwater ecosystem without disrupting established workflows.",
       },
       {
         heading: "Design Approach",
-        body: "We began by reframing the experience from a tool-driven model to an intent-driven one. Instead of asking users to configure searches or dashboards, we centred the interaction around a simple question: What do you want to know? This shift became the foundation for a conversational interface generating insights through natural language. One of the critical focuses was trust — AI-generated insights can feel like a black box if not designed carefully. We ensured outputs were structured, contextual, and easy to interpret, while still allowing users to refine, customise, and iterate on prompts.",
+        body: "We began by reframing the experience from a tool-driven model to an intent-driven one. Instead of asking users to configure searches or dashboards, we centred the interaction around a simple question: What do you want to know? This shift became the foundation for a conversational interface that allowed users to generate insights through natural language.\n\nA key challenge was designing for two very different user groups. New users needed guidance and structure, while experienced users needed speed and flexibility. To address this, we introduced a layered experience — guided templates and pre-built reports helped new users get started quickly, while customisable prompts and reusable workflows gave advanced users the control they needed.\n\nAnother critical focus was trust. AI-generated insights can feel like a black box if not designed carefully. We ensured that outputs were structured, contextual, and easy to interpret, while still allowing users to refine, customise, and iterate on prompts.",
+        image: "/mira-personas.png",
       },
       {
         heading: "Key Features",
-        body: "Mira Studio became the primary workspace for generating insights — users could ask questions about their brand, competitors, or industry trends and instantly receive structured reports, eliminating the need to manually build dashboards. The Prompt Library allowed users to save, organise, and reuse prompts for common analyses, turning individual knowledge into scalable team workflows. The Mira Companion embedded contextual prompts and insights directly into the platform based on what users were viewing, enabling action without leaving the current workflow.",
+        body: "Mira Studio became the primary workspace for generating insights. Users could ask questions about their brand, competitors, or industry trends and instantly receive structured reports — eliminating the need to manually build dashboards or queries and reducing multi-step workflows into a single interaction.\n\nThe Prompt Library allowed users to save, organise, and reuse prompts for common analyses. Over time, teams could build shared libraries of workflows, turning individual knowledge into scalable, repeatable processes.\n\nThe Mira Companion embedded contextual prompts and insights directly into the platform based on what users were viewing, enabling action without leaving the current workflow. For experienced users, this significantly accelerated everyday tasks.",
+        image: "/mira-flow.png",
+      },
+      {
+        heading: "Product Demo",
+        body: "A walkthrough of the core Mira Studio experience — from natural language prompt to structured insight output.",
+        video: "/mira-demo.mp4",
       },
       {
         heading: "Outcome & Impact",
-        body: "The launch of Mira fundamentally changed how users interacted with Meltwater. Tasks that previously required hours of setup could be completed in seconds. New users bypassed the steep learning curve and accessed meaningful insights immediately, while experienced users dramatically reduced time spent on repetitive workflows. Strategically, Mira established the foundation for AI-native experiences across the product and positioned Meltwater at the forefront of AI-driven media intelligence.",
+        body: "The launch of Mira fundamentally changed how users interacted with Meltwater. Tasks that previously required hours of setup could now be completed in seconds through simple prompts. New users were able to bypass the steep learning curve and access meaningful insights immediately, while experienced users dramatically reduced the time spent on repetitive workflows.\n\nFrom a product perspective, Mira increased the accessibility and visibility of advanced features, driving greater engagement with the platform. It also shifted the perception of Meltwater — from a complex set of tools to an intelligent system that delivers insights on demand.\n\nStrategically, Mira established the foundation for AI-native experiences across the product and positioned Meltwater at the forefront of AI-driven media intelligence.",
       },
     ],
   },

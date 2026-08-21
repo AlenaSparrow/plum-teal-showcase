@@ -7,6 +7,7 @@ const ROUTES = [
   "/work",
   "/work/smart-alerts",
   "/work/research",
+  "/work/mira",
   "/work/forecasting",
   "/work/uwork",
   "/about",

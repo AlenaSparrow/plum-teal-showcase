@@ -8,6 +8,7 @@ import smartAlertsPreview from "@/assets/smart-alerts-preview.jpg";
 import researchPreview from "@/assets/research-preview.jpg";
 import forecastingPreview from "@/assets/forecasting-preview.jpg";
 import uworkPreview from "@/assets/uwork-preview.jpg";
+import miraPreview from "@/assets/mira-preview.jpg";
 import { Reveal } from "@/components/SectionReveal";
 import { ClientOnly } from "@/components/ClientOnly";
 const HeroOrb = lazy(() => import("@/components/HeroOrb").then((m) => ({ default: m.HeroOrb })));
@@ -42,9 +43,9 @@ const projects = [
   {
     id: "mira",
     title: "Mira Studio",
-    summary: "Meltwater's AI-powered assistant for media intelligence — conversational discovery for analysts.",
-    tags: ["AI Product", "Conversational UI", "Research"],
-    image: smartAlertsPreview,
+    summary: "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
+    tags: ["AI Product", "Conversational UI", "0→1"],
+    image: miraPreview,
     year: "2025",
   },
   {
@@ -277,7 +278,7 @@ function Work() {
 
       <ul className="space-y-24 lg:space-y-32">
         {projects
-          .filter((p) => ["smart-alerts", "research", "forecasting"].includes(p.id))
+          .filter((p) => ["smart-alerts", "research", "mira"].includes(p.id))
           .map((p, i) => (
             <ProjectCard key={p.id} project={p} index={i} />
           ))}
