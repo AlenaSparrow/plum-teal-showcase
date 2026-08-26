@@ -15,7 +15,7 @@ import "../_libs/react-dom.mjs";
 import "../_libs/isbot.mjs";
 import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
-const unifiedDashboardsPreview = "/assets/unified-dashboards-preview-B7MgHpUi.jpg";
+const unifiedDashboardsPreview = "/assets/unified-dashboards-preview-CDcsH5bc.png";
 const projects = [{
   id: "smart-alerts",
   title: "Smart Alerts Redesign",

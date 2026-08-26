@@ -6,7 +6,7 @@ import smartAlertsPreview from "@/assets/smart-alerts-preview.jpg";
 import forecastingPreview from "@/assets/forecasting-preview.jpg";
 import researchPreview from "@/assets/research-preview.jpg";
 import uworkPreview from "@/assets/uwork-preview.jpg";
-import unifiedDashboardsPreview from "@/assets/unified-dashboards-preview.jpg";
+import unifiedDashboardsPreview from "@/assets/unified-dashboards-preview.png";
 import miraPreview from "@/assets/mira-preview.jpg";
 import { Reveal } from "@/components/SectionReveal";
 

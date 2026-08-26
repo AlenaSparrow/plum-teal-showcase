@@ -200,7 +200,7 @@ const Route$4 = createFileRoute("/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./index-DOYRsRyg.mjs");
+const $$splitComponentImporter$3 = () => import("./index-CFeEaAl2.mjs");
 const Route$3 = createFileRoute("/work/")({
   head: () => ({
     meta: [{
@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-BMzs_vMp.mjs");
+const $$splitComponentImporter$2 = () => import("./index-BNQ6gNNk.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -474,7 +474,7 @@ const caseStudies = [
     year: "2024–2025",
     role: "UX Researcher & Designer",
     company: "Meltwater",
-    heroImage: "/unified-dashboards-preview.jpg",
+    heroImage: "/unified-dashboards-hero.png",
     overview: "The goal was to create a unified experience where users could handle all their analytical needs in one place — dashboards tailored to their specific use case, powered by a new workflow that moved from template selection through input configuration to a generated, shareable report. The research sat inside a longer history: three earlier rounds going back to the 2021 Analyze launch consistently flagged the same themes — the need for custom dashboards, branding and customization controls, autosave, and transparent metric definitions. Every finding from both 2024 and 2025 aligned with what earlier rounds had already surfaced, giving the team a roadmap grounded in four years of converging evidence.",
     stats: [
       { value: "96%", label: "task success across 11 participants and 7 flow tasks" },
@@ -528,7 +528,7 @@ Affordances were the difference-maker everywhere else. Highlights, outlines, and
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-BGJqctdV.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-CecWYT87.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -956,7 +956,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-xagmFDvU.mjs");
+const $$splitComponentImporter = () => import("../_slug-CupuKz-m.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params

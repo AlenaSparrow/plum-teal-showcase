@@ -252,7 +252,7 @@ export const caseStudies: CaseStudy[] = [
     year: "2024–2025",
     role: "UX Researcher & Designer",
     company: "Meltwater",
-    heroImage: "/unified-dashboards-preview.jpg",
+    heroImage: "/unified-dashboards-hero.png",
     overview:
       "The goal was to create a unified experience where users could handle all their analytical needs in one place — dashboards tailored to their specific use case, powered by a new workflow that moved from template selection through input configuration to a generated, shareable report. The research sat inside a longer history: three earlier rounds going back to the 2021 Analyze launch consistently flagged the same themes — the need for custom dashboards, branding and customization controls, autosave, and transparent metric definitions. Every finding from both 2024 and 2025 aligned with what earlier rounds had already surfaced, giving the team a roadmap grounded in four years of converging evidence.",
     stats: [
