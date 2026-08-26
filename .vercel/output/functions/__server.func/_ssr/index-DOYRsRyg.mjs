@@ -17,12 +17,6 @@ import "../_libs/motion-dom.mjs";
 import "../_libs/motion-utils.mjs";
 const unifiedDashboardsPreview = "/assets/unified-dashboards-preview-B7MgHpUi.jpg";
 const projects = [{
-  id: "unified-dashboards",
-  title: "Unified Dashboards",
-  summary: "Four years of usability research turned into one cross-channel reporting view PR and marketing teams can trust.",
-  tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
-  image: unifiedDashboardsPreview
-}, {
   id: "smart-alerts",
   title: "Smart Alerts Redesign",
   summary: "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
@@ -40,6 +34,12 @@ const projects = [{
   summary: "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
   tags: ["AI Product", "Conversational UI", "0→1"],
   image: miraPreview
+}, {
+  id: "unified-dashboards",
+  title: "Unified Dashboards",
+  summary: "Four years of usability research turned into one cross-channel reporting view PR and marketing teams can trust.",
+  tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
+  image: unifiedDashboardsPreview
 }, {
   id: "forecasting",
   title: "Alert Forecasting & AI Insights",

@@ -268,7 +268,7 @@ function CaseStudyPage() {
   );
 }
 
-const VISIBLE_ORDER = ["smart-alerts", "research", "mira", "forecasting", "uwork"];
+const VISIBLE_ORDER = ["smart-alerts", "research", "mira", "unified-dashboards", "forecasting", "uwork"];
 
 function NextProject({ currentId }: { currentId: string }) {
   const visible = caseStudies.filter((c) => VISIBLE_ORDER.includes(c.id)).sort((a, b) => VISIBLE_ORDER.indexOf(a.id) - VISIBLE_ORDER.indexOf(b.id));

@@ -34,14 +34,6 @@ export const Route = createFileRoute("/work/")({
 
 const projects = [
   {
-    id: "unified-dashboards",
-    title: "Unified Dashboards",
-    summary:
-      "Four years of usability research turned into one cross-channel reporting view PR and marketing teams can trust.",
-    tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
-    image: unifiedDashboardsPreview,
-  },
-  {
     id: "smart-alerts",
     title: "Smart Alerts Redesign",
     summary:
@@ -64,6 +56,14 @@ const projects = [
       "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
     tags: ["AI Product", "Conversational UI", "0→1"],
     image: miraPreview,
+  },
+  {
+    id: "unified-dashboards",
+    title: "Unified Dashboards",
+    summary:
+      "Four years of usability research turned into one cross-channel reporting view PR and marketing teams can trust.",
+    tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
+    image: unifiedDashboardsPreview,
   },
   {
     id: "forecasting",

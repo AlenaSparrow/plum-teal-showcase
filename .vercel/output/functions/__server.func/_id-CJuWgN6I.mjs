@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route$1, c as caseStudies } from "./_ssr/router-aBS02hug.mjs";
+import { R as Route$1, c as caseStudies } from "./_ssr/router-tIBQ8tee.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";
@@ -161,7 +161,7 @@ function CaseStudyPage() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(VideoOverlay, { src: videoOverlay, onClose: () => setVideoOverlay(null) })
   ] });
 }
-const VISIBLE_ORDER = ["smart-alerts", "research", "mira", "forecasting", "uwork"];
+const VISIBLE_ORDER = ["smart-alerts", "research", "mira", "unified-dashboards", "forecasting", "uwork"];
 function NextProject({
   currentId
 }) {
