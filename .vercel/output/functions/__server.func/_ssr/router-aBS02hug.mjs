@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-C5NW4P_x.mjs");
+const $$splitComponentImporter$2 = () => import("./index-hWnQE8X4.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -526,7 +526,7 @@ The headline finding: drag-and-drop is the default mental model. Every task invo
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-BW5xvtyt.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-J6pH6YKf.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -954,7 +954,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-B56wVh4D.mjs");
+const $$splitComponentImporter = () => import("../_slug-CozkZaAT.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params

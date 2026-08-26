@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route$1, c as caseStudies } from "./_ssr/router-DFcFf4CP.mjs";
+import { R as Route$1, c as caseStudies } from "./_ssr/router-aBS02hug.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";
@@ -20,7 +20,7 @@ import "./_libs/motion-utils.mjs";
 const researchAlertsStructure = "/assets/research-alerts-structure-CT6Ys3fm.png";
 const saAlertSelection = "/assets/sa-alert-selection-FskRL6AL.png";
 const saCreateAlert = "/assets/sa-create-alert-IAAdDkHC.png";
-const saAlertsPageChanges = "/assets/sa-alerts-page-changes-CjLr9rCl.jpg";
+const saAlertsPageChanges = "/assets/sa-alerts-page-changes-D079UV6Z.jpg";
 const saViewExample = "/assets/sa-view-example-Dbz87aWF.png";
 const uworkOwner = "/assets/uwork-owner-C_tAJ-69.svg";
 const uworkWorker = "/assets/uwork-worker-BKUuG-pm.svg";
