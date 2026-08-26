@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-BNQ6gNNk.mjs");
+const $$splitComponentImporter$2 = () => import("./index-DmmJB-i2.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -512,7 +512,8 @@ Affordances were the difference-maker everywhere else. Highlights, outlines, and
       {
         heading: "Design Decisions",
         body: "The research directly shaped four priority areas. First, drag-and-drop became a firm recommendation — every task involving movement surfaced the same expectation, making it the baseline users were already designing against. Second, the Add Widgets button needed to be more prominent (colored, with a Plus icon) and adding a new row needed a clearer entry point — currently split ambiguously between a Plus button on hover and the Add Widget path. Third, language needed a full audit: renaming 'Cards' to 'Widgets', making Dashboard Inputs more visible, clarifying 'Previously' in metric comparisons, and surfacing what data sources are powering each metric. Fourth, the template selector needed structural work — categories felt role-based rather than use-case-based, clicking a category was expected to filter the grid, and too many options at once overwhelmed participants who needed headers and alphabetical order to navigate.\n\nAcross both studies, the recommendation on autosave was unanimous: it should be on by default, paired with undo and version history so users could experiment without fear of permanent changes.",
-        image: "/unified-dashboards-widget-library.jpg"
+        image: "/unified-dashboards-add-widget.png",
+        image2: "/unified-dashboards-autosave.png"
       },
       {
         heading: "Outcomes",
@@ -528,7 +529,7 @@ Affordances were the difference-maker everywhere else. Highlights, outlines, and
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-CecWYT87.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-DARw-gcY.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -956,7 +957,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-CupuKz-m.mjs");
+const $$splitComponentImporter = () => import("../_slug-5Kd-sU2s.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params

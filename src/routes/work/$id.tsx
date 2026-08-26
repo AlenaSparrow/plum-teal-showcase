@@ -209,7 +209,7 @@ function CaseStudyPage() {
                     )}
                   </div>
                   {section.chartId && <ChartBlock chartId={section.chartId} onOpenImage={(imgs, i) => openLightbox(imgs, i)} />}
-                  {section.image && (
+                  {section.image && !section.image2 && (
                     <button
                       onClick={() => openLightbox([section.image!])}
                       className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
@@ -226,6 +226,29 @@ function CaseStudyPage() {
                         <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
                       </div>
                     </button>
+                  )}
+                  {section.image && section.image2 && (
+                    <div className="grid grid-cols-2 gap-4">
+                      {[section.image, section.image2].map((src, i) => (
+                        <button
+                          key={i}
+                          onClick={() => openLightbox([section.image!, section.image2!], i)}
+                          className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
+                          style={{ boxShadow: "var(--shadow-card)" }}
+                          aria-label="View full image"
+                        >
+                          <img
+                            src={src}
+                            alt={`${section.heading} ${i + 1}`}
+                            loading="lazy"
+                            className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                          />
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
+                            <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
                   )}
                 </div>
 

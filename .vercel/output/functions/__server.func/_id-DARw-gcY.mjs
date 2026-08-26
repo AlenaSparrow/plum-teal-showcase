@@ -1,7 +1,7 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./_libs/react.mjs";
 import { L as Link } from "./_libs/tanstack__react-router.mjs";
 import { R as Reveal, a as avLogoPng } from "./_ssr/SectionReveal-CPXu9wTK.mjs";
-import { R as Route$1, c as caseStudies } from "./_ssr/router-Bdo0UmLZ.mjs";
+import { R as Route$1, c as caseStudies } from "./_ssr/router-DAmmUKGE.mjs";
 import { m as motion, A as AnimatePresence } from "./_libs/framer-motion.mjs";
 import { b as ArrowLeft, Z as ZoomIn, A as ArrowUpRight, X, c as ChevronLeft, d as ChevronRight } from "./_libs/lucide-react.mjs";
 import "./_libs/tanstack__router-core.mjs";
@@ -132,12 +132,18 @@ function CaseStudyPage() {
           }, children: /* @__PURE__ */ jsxRuntimeExports.jsx("video", { src: section.video, autoPlay: true, loop: true, muted: true, playsInline: true, controls: true, className: "w-full h-auto" }) })
         ] }),
         section.chartId && /* @__PURE__ */ jsxRuntimeExports.jsx(ChartBlock, { chartId: section.chartId, onOpenImage: (imgs, i2) => openLightbox(imgs, i2) }),
-        section.image && /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => openLightbox([section.image]), className: "group w-full text-left rounded-2xl overflow-hidden bg-white relative block", style: {
+        section.image && !section.image2 && /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => openLightbox([section.image]), className: "group w-full text-left rounded-2xl overflow-hidden bg-white relative block", style: {
           boxShadow: "var(--shadow-card)"
         }, "aria-label": "View full image", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: section.image, alt: section.heading, loading: "lazy", className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomIn, { className: "size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" }) })
-        ] })
+        ] }),
+        section.image && section.image2 && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-4", children: [section.image, section.image2].map((src, i2) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { onClick: () => openLightbox([section.image, section.image2], i2), className: "group w-full text-left rounded-2xl overflow-hidden bg-white relative block", style: {
+          boxShadow: "var(--shadow-card)"
+        }, "aria-label": "View full image", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src, alt: `${section.heading} ${i2 + 1}`, loading: "lazy", className: "w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(ZoomIn, { className: "size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" }) })
+        ] }, i2)) })
       ] })
     ] }) }) }, section.heading)) }),
     cs.quote && /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-24 lg:py-32", style: {

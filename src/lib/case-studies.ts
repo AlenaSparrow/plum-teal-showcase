@@ -8,7 +8,7 @@ export interface CaseStudy {
   company: string;
   heroImage: string;
   overview: string;
-  sections: { heading: string; body: string; image?: string; chartId?: string; video?: string }[];
+  sections: { heading: string; body: string; image?: string; image2?: string; chartId?: string; video?: string }[];
   stats?: { value: string; label: string }[];
   quote?: { text: string; attribution: string };
 }
@@ -283,7 +283,8 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Design Decisions",
         body: "The research directly shaped four priority areas. First, drag-and-drop became a firm recommendation — every task involving movement surfaced the same expectation, making it the baseline users were already designing against. Second, the Add Widgets button needed to be more prominent (colored, with a Plus icon) and adding a new row needed a clearer entry point — currently split ambiguously between a Plus button on hover and the Add Widget path. Third, language needed a full audit: renaming 'Cards' to 'Widgets', making Dashboard Inputs more visible, clarifying 'Previously' in metric comparisons, and surfacing what data sources are powering each metric. Fourth, the template selector needed structural work — categories felt role-based rather than use-case-based, clicking a category was expected to filter the grid, and too many options at once overwhelmed participants who needed headers and alphabetical order to navigate.\n\nAcross both studies, the recommendation on autosave was unanimous: it should be on by default, paired with undo and version history so users could experiment without fear of permanent changes.",
-        image: "/unified-dashboards-widget-library.jpg",
+        image: "/unified-dashboards-add-widget.png",
+        image2: "/unified-dashboards-autosave.png",
       },
       {
         heading: "Outcomes",
