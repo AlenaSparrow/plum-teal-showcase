@@ -268,11 +268,12 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "What We Tested — December 2024",
         body: "11 participants — 5 Meltwater customers and 6 users of competitor tools, a mix of PR and social roles — were moderated through the full create-a-dashboard flow. Acting as a Tesla communications specialist, they were asked to build a dashboard covering a recent campaign's media impact across outreach, social, and influencer activity. 7 tasks: rename the dashboard, review inputs, add a widget, name it, add a custom input, add a cover slide, and download as PDF.\n\n96% of all task attempts succeeded. Outright failures clustered around two steps: reviewing Dashboard Inputs (participants struggled to differentiate inputs, metrics, and filters) and adding a widget (language confusion — \"Card is a weird word to me... I don't see these as cards. Maybe charts or tables\" — P2). These two friction points shaped the key design recommendations.",
-        image: "/unified-dashboards-scenario.jpg",
+        image: "/unified-dashboards-what-we-tested.png",
       },
       {
         heading: "Key Insights",
         body: "Six insights came out of the December study — each backed by participant quotes and consistent with earlier research rounds.\n\nUsers craft stories, not spreadsheets. Descriptions and comments were what transformed raw metrics into a narrative stakeholders could follow: \"I end up adding some context to it when I send it to somebody, so that they understand what it actually means\" (P4). Customization and branding were non-negotiable: participants expected control over chart colors, widget renaming, and layout — and several suggested AI-driven color suggestions and batch adjustments. Participants defaulted to custom dashboards because they didn't realize templates were a fully editable starting point, not a locked format. Template selection required real transparency — users needed to see both the visual and the metrics included before committing. Metric definitions were load-bearing: info tips were essential, and metric titles alone were frequently described as \"meaningless\" without explanation of how a metric is calculated. And trust depended on data transparency — participants expressed anxiety about dynamic dashboard links, inconsistent metrics across platform features, and whether the platform was built for businesses their size.",
+        image: "/unified-dashboards-task-analytics.png",
       },
       {
         heading: "Interactions Testing — April 2025",
@@ -287,6 +288,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: "Outcomes",
         body: "The new flow was broadly seen as intuitive — participants noted it was easier to navigate than Google Analytics, and valued centralized input selection and familiar patterns. Previous research rounds (Custom Dashboards Round 1 and Round 2, Analyze 2021) all aligned with current findings, confirming that the same core needs had been stable across four years: fast and flexible analysis, real customization controls, autosave, transparent metric definitions, and dashboards that help users tell a story rather than just display data.\n\nKey takeaways: Structural clarity — clear labeling, logical grouping, and consistent language — matters more than visual polish. Affordances are not optional: every interaction that lacked visible hover states or tooltips created friction, and every interaction that included them succeeded. And drag-and-drop is not a feature request — it is the default mental model for any content that can be rearranged, and needs to be treated as the baseline in the next design iteration.",
+        image: "/unified-dashboards-takeaways.png",
       },
     ],
     quote: {
