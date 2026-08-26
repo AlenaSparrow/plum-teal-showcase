@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-YAb6DiYz.mjs");
+const $$splitComponentImporter$2 = () => import("./index-BUdKYLpx.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -475,7 +475,7 @@ const caseStudies = [
     role: "UX Researcher & Designer",
     company: "Meltwater",
     heroImage: "/unified-dashboards-preview.jpg",
-    overview: "The goal was to create a unified experience where users could handle all their analytical needs in one place — dashboards tailored to their specific use case, powered by a new workflow that moved from template selection through input configuration to a generated, shareable report. I led two rounds of research to validate the design: a moderated usability study with 11 participants in December 2024 (assessing whether users could understand and complete the full flow end-to-end) and an unmoderated interactions survey with 30 participants in April 2025 (testing the six core edit interactions they would use constantly day-to-day).\n\nThe research sat inside a longer history: three earlier rounds going back to the 2021 Analyze launch consistently flagged the same themes — the need for custom dashboards, branding and customization controls, autosave, and transparent metric definitions. Every finding from both 2024 and 2025 aligned with what earlier rounds had already surfaced, giving the team a roadmap grounded in four years of converging evidence.",
+    overview: "The goal was to create a unified experience where users could handle all their analytical needs in one place — dashboards tailored to their specific use case, powered by a new workflow that moved from template selection through input configuration to a generated, shareable report. The research sat inside a longer history: three earlier rounds going back to the 2021 Analyze launch consistently flagged the same themes — the need for custom dashboards, branding and customization controls, autosave, and transparent metric definitions. Every finding from both 2024 and 2025 aligned with what earlier rounds had already surfaced, giving the team a roadmap grounded in four years of converging evidence.",
     stats: [
       { value: "96%", label: "task success across 11 participants and 7 flow tasks" },
       { value: "4.4/5", label: "avg. ease-of-use across 6 core interactions, 30 testers" },
@@ -527,7 +527,7 @@ Affordances were the difference-maker everywhere else. Highlights, outlines, and
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-DvDjpwQs.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-Bi6NEr6k.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -955,7 +955,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-DvAxpx6G.mjs");
+const $$splitComponentImporter = () => import("../_slug-DwhZsb_Z.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params
