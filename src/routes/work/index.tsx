@@ -6,6 +6,7 @@ import smartAlertsPreview from "@/assets/smart-alerts-preview.jpg";
 import forecastingPreview from "@/assets/forecasting-preview.jpg";
 import researchPreview from "@/assets/research-preview.jpg";
 import uworkPreview from "@/assets/uwork-preview.jpg";
+import unifiedDashboardsPreview from "@/assets/unified-dashboards-preview.jpg";
 import miraPreview from "@/assets/mira-preview.jpg";
 import { Reveal } from "@/components/SectionReveal";
 
@@ -13,12 +14,19 @@ export const Route = createFileRoute("/work/")({
   head: () => ({
     meta: [
       { title: "Work — Alena Vorobiev" },
-      { name: "description", content: "Case studies by Alena Vorobiev — UX design for AI, enterprise, and data products." },
+      {
+        name: "description",
+        content:
+          "Case studies by Alena Vorobiev — UX design for AI, enterprise, and data products.",
+      },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600&display=swap",
+      },
     ],
   }),
   component: WorkPage,
@@ -26,37 +34,50 @@ export const Route = createFileRoute("/work/")({
 
 const projects = [
   {
+    id: "unified-dashboards",
+    title: "Unified Dashboards",
+    summary:
+      "Four years of usability research turned into one cross-channel reporting view PR and marketing teams can trust.",
+    tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
+    image: unifiedDashboardsPreview,
+  },
+  {
     id: "smart-alerts",
     title: "Smart Alerts Redesign",
-    summary: "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
+    summary:
+      "Rebuilt the alert creation flow to reduce setup time and increase trust in automated monitoring.",
     tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
     image: smartAlertsPreview,
   },
   {
     id: "research",
     title: "Multi-Source Alerts Research",
-    summary: "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
+    summary:
+      "Generative and evaluative research with PMs, researchers, and engineers to validate a new alerts model.",
     tags: ["UX Research", "Interviews", "Synthesis"],
     image: researchPreview,
   },
   {
     id: "mira",
     title: "Mira Studio",
-    summary: "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
+    summary:
+      "AI-powered assistant transforming complex media intelligence workflows into a conversational experience.",
     tags: ["AI Product", "Conversational UI", "0→1"],
     image: miraPreview,
   },
   {
     id: "forecasting",
     title: "Alert Forecasting & AI Insights",
-    summary: "Forecasting and AI insights for Spike Detection — helping users anticipate trends before they break.",
+    summary:
+      "Forecasting and AI insights for Spike Detection — helping users anticipate trends before they break.",
     tags: ["Data Viz", "AI Insights", "Feature Design"],
     image: forecastingPreview,
   },
   {
     id: "uwork",
     title: "uWork",
-    summary: "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
+    summary:
+      "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
     tags: ["Mobile", "0→1 Product", "Branding"],
     image: uworkPreview,
   },
@@ -111,17 +132,25 @@ function Nav() {
           </span>
         </Link>
         <nav className="hidden md:flex items-center gap-10 text-sm">
-          <Link to="/work" className="text-primary font-medium">Work</Link>
-          <Link to="/articles" className="hover:text-primary transition-colors">Writing</Link>
-          <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-          <Link to="/contact" className="hover:text-primary transition-colors">Contact</Link>
+          <Link to="/work" className="text-primary font-medium">
+            Work
+          </Link>
+          <Link to="/articles" className="hover:text-primary transition-colors">
+            Writing
+          </Link>
+          <Link to="/about" className="hover:text-primary transition-colors">
+            About
+          </Link>
+          <Link to="/contact" className="hover:text-primary transition-colors">
+            Contact
+          </Link>
         </nav>
       </div>
     </motion.header>
   );
 }
 
-function ProjectCard({ project, index }: { project: typeof projects[number]; index: number }) {
+function ProjectCard({ project, index }: { project: (typeof projects)[number]; index: number }) {
   const flipped = index % 2 === 1;
   return (
     <Reveal as="li" y={48}>
@@ -131,15 +160,30 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
         >
           <div className="relative">
             {/* Offset background block */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl" style={{ background: "var(--surface)" }} />
+            <div
+              className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl"
+              style={{ background: "var(--surface)" }}
+            />
             {/* Gold accent line */}
             <div className="absolute -left-4 top-8 bottom-8 w-px bg-accent opacity-60" />
             {/* Dot grid */}
-            <svg className="absolute -top-5 -left-5 opacity-25 pointer-events-none" width="64" height="64" viewBox="0 0 64 64" aria-hidden>
+            <svg
+              className="absolute -top-5 -left-5 opacity-25 pointer-events-none"
+              width="64"
+              height="64"
+              viewBox="0 0 64 64"
+              aria-hidden
+            >
               {Array.from({ length: 4 }).map((_, row) =>
                 Array.from({ length: 4 }).map((_, col) => (
-                  <circle key={`${row}-${col}`} cx={col * 16 + 8} cy={row * 16 + 8} r="1.5" fill="var(--plum)" />
-                ))
+                  <circle
+                    key={`${row}-${col}`}
+                    cx={col * 16 + 8}
+                    cy={row * 16 + 8}
+                    r="1.5"
+                    fill="var(--plum)"
+                  />
+                )),
               )}
             </svg>
             <motion.div
@@ -187,4 +231,3 @@ function ProjectCard({ project, index }: { project: typeof projects[number]; ind
     </Reveal>
   );
 }
-

@@ -6,7 +6,7 @@ import avLogoPng from "@/assets/av-logo.png";
 import researchAlertsStructure from "@/assets/research-alerts-structure.png";
 import saAlertSelection from "@/assets/sa-alert-selection.png";
 import saCreateAlert from "@/assets/sa-create-alert.png";
-import saAlertsPageChanges from "@/assets/sa-alerts-page-changes.png";
+import saAlertsPageChanges from "@/assets/sa-alerts-page-changes.jpg";
 import saViewExample from "@/assets/sa-view-example.png";
 import uworkOwner from "@/assets/uwork-owner.svg";
 import uworkWorker from "@/assets/uwork-worker.svg";

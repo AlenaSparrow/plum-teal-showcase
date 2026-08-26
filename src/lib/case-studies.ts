@@ -17,7 +17,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "smart-alerts",
     title: "Smart Alerts Redesign",
-    tagline: "Redesigned the Smart Alerts experience to improve clarity, usability, and trust by simplifying alert creation.",
+    tagline:
+      "Redesigned the Smart Alerts experience to improve clarity, usability, and trust by simplifying alert creation.",
     tags: ["Enterprise SaaS", "Design System", "0→1 Flow"],
     year: "2025",
     role: "Lead UX Designer",
@@ -36,14 +37,14 @@ export const caseStudies: CaseStudy[] = [
         body: "User feedback consistently highlighted confusion in the Alert Picker. The page contained long descriptions for each alert type, forcing users to read through dense explanations before making a decision. Users had no way to preview what an alert would actually look like once created. In parallel, Sales representatives frequently create multiple alerts for the same search for VIP clients, while most regular users only create a few for their own monitoring — creating a tension between speed for Sales and simplicity for users.",
       },
       {
-        heading: "Solution: Alert Picker",
-        body: "Balancing the needs of Sales and end users required a contextual solution. Rather than supporting multi-alert creation everywhere, we aligned functionality with actual workflows: the Alert page supports single alert creation (simpler for users), while the Explore page supports multi-alert creation (faster for Sales). This preserved efficiency for Sales teams while significantly reducing confusion for self-serve users.",
-        chartId: "smart-alerts-solution",
-      },
-      {
         heading: "Solution: Alerts Homepage",
         body: "",
         chartId: "smart-alerts-homepage",
+      },
+      {
+        heading: "Solution: Alert Picker",
+        body: "Balancing the needs of Sales and end users required a contextual solution. Rather than supporting multi-alert creation everywhere, we aligned functionality with actual workflows: the Alert page supports single alert creation (simpler for users), while the Explore page supports multi-alert creation (faster for Sales). This preserved efficiency for Sales teams while significantly reducing confusion for self-serve users.",
+        chartId: "smart-alerts-solution",
       },
       {
         heading: "Outcomes",
@@ -54,7 +55,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "mira",
     title: "Mira Studio",
-    tagline: "Meltwater's AI-powered assistant — transforming complex media intelligence workflows into a conversational experience.",
+    tagline:
+      "Meltwater's AI-powered assistant — transforming complex media intelligence workflows into a conversational experience.",
     tags: ["AI Product", "Conversational UI", "0→1"],
     year: "2025",
     role: "Lead UX Designer",
@@ -99,7 +101,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "research",
     title: "Multi-Source Alerts Research",
-    tagline: "A multi-method research programme uncovering root causes of alert complexity and shaping a new alerts architecture.",
+    tagline:
+      "A multi-method research programme uncovering root causes of alert complexity and shaping a new alerts architecture.",
     tags: ["UX Research", "Interviews", "Synthesis"],
     year: "2024",
     role: "UX Researcher & Designer",
@@ -148,7 +151,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "forecasting",
     title: "Alert Forecasting & AI Insights",
-    tagline: "Shifting spike detection from reactive notification to proactive decision support — with forecasting and AI-powered insights.",
+    tagline:
+      "Shifting spike detection from reactive notification to proactive decision support — with forecasting and AI-powered insights.",
     tags: ["Data Viz", "AI Insights", "Feature Design"],
     year: "2024",
     role: "Lead UX Designer",
@@ -190,7 +194,8 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "uwork",
     title: "uWork",
-    tagline: "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
+    tagline:
+      "Mobile app helping self-employed tradespeople and small construction crews manage jobs end-to-end.",
     tags: ["Mobile", "0→1 Product", "Branding"],
     year: "2023",
     role: "Lead UX/UI Designer",
@@ -237,6 +242,62 @@ export const caseStudies: CaseStudy[] = [
         body: "The app launched on iOS with strong feedback from early users in the trades community. The design system built for uWork established visual and interaction patterns that scaled cleanly as new features were added post-launch. User feedback gathered after launch shaped the iteration roadmap and confirmed the core IA decisions made during the design process.",
       },
     ],
+  },
+  {
+    id: "unified-dashboards",
+    title: "Unified Dashboards",
+    tagline:
+      "Turning four years of scattered brand-reporting research into one dashboard PR and marketing teams can actually trust.",
+    tags: ["UX Research", "Enterprise SaaS", "0→1 Product"],
+    year: "2021–2025",
+    role: "UX Researcher & Designer",
+    company: "Meltwater",
+    heroImage: "/unified-dashboards-preview.jpg",
+    overview:
+      "PR and marketing teams don't just manage a growing list of channels — they're expected to regularly report on owned, paid, earned, and shared media performance to leadership, and prove it's working. In practice, that reporting lived across a pile of disconnected platforms: fragmented data wasted hours switching tools and buried the clarity a single view could give; without one comprehensive view, emerging risks and shifts in audience behavior were easy to miss; and PR, marketing, and insights teams reported separately, duplicating effort and sending inconsistent messages to leadership.\n\nUnified Dashboards set out to fix that — one customizable, trustworthy place to combine owned, paid, earned, and (soon) influencer data, without stripping out the flexibility niche reporting needs require. I worked across a multi-year research and design program that repeatedly tested this problem against real users, from the original 2021 Analyze research through a December 2024 usability study and an April 2025 interactions survey, alongside the Roles & Permissions system that made the product enterprise-ready.",
+    stats: [
+      { value: "96%", label: "task-success rate across 11 participants × 7 flow tasks" },
+      { value: "4.4/5", label: "avg. ease-of-use across 6 core interactions, 30 testers" },
+      { value: "4", label: "independent research rounds converging on the same needs" },
+    ],
+    sections: [
+      {
+        heading: "Research Approach",
+        body: "This wasn't one study — it was a research program that kept checking its own homework. The 2021 Analyze launch research found that participants used different dashboards for different jobs, that custom dashboards beat generic summaries, and that customizing charts and reports was a must-have. Round 1 of Custom Dashboards research surfaced that doing complex analysis quickly was a key unmet need, and that slow load times were actively harmful. Round 2 found that autosave, widget previews, and version history were expected the moment permissions and multi-user editing entered the picture — several participants had already lost work without autosave.\n\nMost of what the December 2024 study found was flagged by the research team as consistent with all three earlier rounds — turning recommendations into a roadmap the team could ship with real confidence instead of re-litigating the same open questions study after study.",
+      },
+      {
+        heading: "December 2024 Usability Study",
+        body: "11 participants — 5 Meltwater customers and 6 users of competitor tools, a mix of PR and social roles — were moderated through the full create-a-dashboard flow. They played a communications specialist monitoring Tesla, tasked with building a dashboard to show the media impact of a recent campaign spanning outreach, social, and influencer activity, across 7 tasks from renaming the dashboard to downloading it as a PDF.\n\n96% of all 77 task attempts succeeded. The 3 outright failures clustered on two steps — reviewing dashboard inputs and adding a card — which is exactly where the fixes below point.",
+        image: "/unified-dashboards-scenario.jpg",
+      },
+      {
+        heading: "What We Learned",
+        body: "Six insights shaped the design. Users weren't just creating analytics, they were crafting a story for stakeholders — descriptions and comments were what turned a dashboard into a narrative a non-expert could follow (\"I used to be a teacher — that explained, like, what's a click?\" — P8). Customization and branding were crucial to making information consumable: \"I'll spend the most time on customization, not the data — it's easiest when it's 'pretty' to them, or branded toward that company\" (P9). Participants defaulted to custom dashboards for their niche use cases, often without realizing templates could be edited too, and needed real transparency — both the visual and the metrics included — to trust a template. Metric definitions were essential to interpreting and communicating insight: info tips were a load-bearing feature, and titles alone were often \"meaningless\" without an explanation of what a metric is and how it's calculated. And trust in the platform depended on reliable features and transparent sources — some participants felt the product was built for huge brands, with \"really no level for a small business type\" (P8).",
+      },
+      {
+        heading: "Interactions Survey — April 2025",
+        body: 'Where December zoomed out to the whole flow, this round zoomed into the six moves people make constantly while building a dashboard: adding, editing, and moving widgets; adding, moving, and deleting rows. 30 unmoderated testers, 5 per task, each against its own recorded prototype — average success across all six interactions was ~97%, with average ease-of-use at 4.4 out of 5.\n\nThe headline finding: drag-and-drop is the default mental model. Every task involving movement saw participants try to physically drag the element first — the cause of the one clear miss, Move a Widget, at 80% success ("This is the only way I would think to do this — click it and drag it one position to the right. I don\'t know what else to do."). Affordances rescued the rest of the experience: highlights, outlines, and tooltips consistently guided people to the right control even when their first instinct failed.',
+        image: "/unified-dashboards-interactions.jpg",
+      },
+      {
+        heading: "Designing Governance: Roles & Permissions",
+        body: "As Unified Dashboards outgrew its origins bundled inside Explore+, its access model had to grow up too. We decoupled dashboarding into its own universal-dashboard entitlement — migrated transparently so existing users felt nothing change — and designed four permission tiers from scratch: No Access, where the Dashboards entry doesn't appear in navigation at all; Viewer, who sees every widget including ones built on apps they can't otherwise access; and two Admin modes, where CRUD access is gated per-widget by the admin's own access to each widget's underlying app, with a clear \"ask an admin\" prompt rather than a silent dead end.",
+        image: "/unified-dashboards-permissions-viewer.jpg",
+      },
+      {
+        heading: "From Research to Product",
+        body: "Four commitments trace straight back to four years of research. A complete, cross-channel view — owned, paid, earned, and soon influencer data in one customizable view — answers the custom-dashboard need every round surfaced since 2021. Real-time sharing with guardrails — live, auto-refresh dashboards for stakeholders without Meltwater access, with view-only filtering — productizes the trust-and-transparency insight and the Roles & Permissions work directly. Smarter, faster insight, through AI-assisted widgets and cross-module pulls, echoes the branding and AI-color-suggestion ask from the research. And an expanded template and widget library, plus workspace and folder governance, gives small teams a fast start and large orgs the structure to stay aligned.",
+        image: "/unified-dashboards-widget-library.jpg",
+      },
+      {
+        heading: "Reflection",
+        body: "What worked: the findings themselves, and the deliberate mix in the participant group — Meltwater customers seated next to competitor-tool users, PR roles next to social roles. What I'd carry forward: drag-and-drop showed up as the expected interaction in every single research round that touched moving or reordering content. It's no longer a nice-to-have, it's the baseline people are designing against whether we build it or not — the next round of work should treat it as the default.",
+      },
+    ],
+    quote: {
+      text: "I'll spend the most time on customization, not the data — it's easiest when it's 'pretty' to them, or branded toward that company. So that's probably the number one thing that I'm making it digestible and consumable.",
+      attribution: "Usability study participant —",
+    },
   },
 ];
 
