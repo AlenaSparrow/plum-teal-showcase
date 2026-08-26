@@ -223,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./index-Cdqq0JRI.mjs");
+const $$splitComponentImporter$2 = () => import("./index-BsmL-z6h.mjs");
 const Route$2 = createFileRoute("/articles/")({
   head: () => ({
     meta: [{
@@ -491,14 +491,13 @@ const caseStudies = [
         body: `11 participants — 5 Meltwater customers and 6 users of competitor tools, a mix of PR and social roles — were moderated through the full create-a-dashboard flow. Acting as a Tesla communications specialist, they were asked to build a dashboard covering a recent campaign's media impact across outreach, social, and influencer activity. 7 tasks: rename the dashboard, review inputs, add a widget, name it, add a custom input, add a cover slide, and download as PDF.
 
 96% of all task attempts succeeded. Outright failures clustered around two steps: reviewing Dashboard Inputs (participants struggled to differentiate inputs, metrics, and filters) and adding a widget (language confusion — "Card is a weird word to me... I don't see these as cards. Maybe charts or tables" — P2). These two friction points shaped the key design recommendations.`,
-        image: "/unified-dashboards-what-we-tested.png"
+        image: "/unified-dashboards-task-analytics.png"
       },
       {
         heading: "Key Insights",
         body: `Six insights came out of the December study — each backed by participant quotes and consistent with earlier research rounds.
 
-Users craft stories, not spreadsheets. Descriptions and comments were what transformed raw metrics into a narrative stakeholders could follow: "I end up adding some context to it when I send it to somebody, so that they understand what it actually means" (P4). Customization and branding were non-negotiable: participants expected control over chart colors, widget renaming, and layout — and several suggested AI-driven color suggestions and batch adjustments. Participants defaulted to custom dashboards because they didn't realize templates were a fully editable starting point, not a locked format. Template selection required real transparency — users needed to see both the visual and the metrics included before committing. Metric definitions were load-bearing: info tips were essential, and metric titles alone were frequently described as "meaningless" without explanation of how a metric is calculated. And trust depended on data transparency — participants expressed anxiety about dynamic dashboard links, inconsistent metrics across platform features, and whether the platform was built for businesses their size.`,
-        image: "/unified-dashboards-task-analytics.png"
+Users craft stories, not spreadsheets. Descriptions and comments were what transformed raw metrics into a narrative stakeholders could follow: "I end up adding some context to it when I send it to somebody, so that they understand what it actually means" (P4). Customization and branding were non-negotiable: participants expected control over chart colors, widget renaming, and layout — and several suggested AI-driven color suggestions and batch adjustments. Participants defaulted to custom dashboards because they didn't realize templates were a fully editable starting point, not a locked format. Template selection required real transparency — users needed to see both the visual and the metrics included before committing. Metric definitions were load-bearing: info tips were essential, and metric titles alone were frequently described as "meaningless" without explanation of how a metric is calculated. And trust depended on data transparency — participants expressed anxiety about dynamic dashboard links, inconsistent metrics across platform features, and whether the platform was built for businesses their size.`
       },
       {
         heading: "Interactions Testing — April 2025",
@@ -529,7 +528,7 @@ Affordances were the difference-maker everywhere else. Highlights, outlines, and
 function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
-const $$splitComponentImporter$1 = () => import("../_id-CwV44f_5.mjs");
+const $$splitComponentImporter$1 = () => import("../_id-Chvx0GRN.mjs");
 const Route$1 = createFileRoute("/work/$id")({
   head: ({
     params
@@ -957,7 +956,7 @@ const articles = [
     ]
   }
 ];
-const $$splitComponentImporter = () => import("../_slug-DwmhqwPx.mjs");
+const $$splitComponentImporter = () => import("../_slug-QuDd-oJ1.mjs");
 const Route = createFileRoute("/articles/$slug")({
   head: ({
     params
