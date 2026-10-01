@@ -2,7 +2,7 @@ import { readFileSync, writeFileSync } from "fs";
 
 const path = ".vercel/output/functions/__server.func/.vc-config.json";
 const config = JSON.parse(readFileSync(path, "utf8"));
-config.runtime = "nodejs20.x";
+config.runtime = "nodejs24.x";
 config.supportsResponseStreaming = false;
 config.maxDuration = 60;
 writeFileSync(path, JSON.stringify(config, null, 2));
