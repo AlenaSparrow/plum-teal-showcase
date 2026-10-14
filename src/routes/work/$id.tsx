@@ -23,7 +23,7 @@ import surveySlide2 from "@/assets/survey-slide2.png";
 import surveySlide3 from "@/assets/survey-slide3.png";
 import surveySlide4 from "@/assets/survey-slide4.png";
 import { Reveal } from "@/components/SectionReveal";
-import { getCaseStudy, caseStudies } from "@/lib/case-studies";
+import { getCaseStudy, caseStudies, type SectionBlock } from "@/lib/case-studies";
 
 export const Route = createFileRoute("/work/$id")({
   head: ({ params }) => {
@@ -185,31 +185,35 @@ function CaseStudyPage() {
 
                 {/* Right: body + image */}
                 <div className="lg:col-span-8 space-y-10">
-                  <div className="space-y-8">
-                    <div className="text-lg leading-[1.8] text-foreground/80 space-y-5">
-                      {section.body.split("\n\n").map((para, j) => (
-                        <p key={j}>{para}</p>
-                      ))}
-                    </div>
-                    {section.video && (
-                      <div
-                        className="rounded-2xl overflow-hidden bg-black w-full lg:max-w-2xl"
-                        style={{ boxShadow: "var(--shadow-card)" }}
-                      >
-                        <video
-                          src={section.video}
-                          autoPlay
-                          loop
-                          muted
-                          playsInline
-                          controls
-                          className="w-full h-auto"
-                        />
+                  {section.blocks ? (
+                    <BlocksRenderer blocks={section.blocks} heading={section.heading} onOpenImage={openLightbox} />
+                  ) : (
+                    <div className="space-y-8">
+                      <div className="text-lg leading-[1.8] text-foreground/80 space-y-5">
+                        {(section.body ?? "").split("\n\n").map((para, j) => (
+                          <p key={j}>{para}</p>
+                        ))}
                       </div>
-                    )}
-                  </div>
+                      {section.video && (
+                        <div
+                          className="rounded-2xl overflow-hidden bg-black w-full lg:max-w-2xl"
+                          style={{ boxShadow: "var(--shadow-card)" }}
+                        >
+                          <video
+                            src={section.video}
+                            autoPlay
+                            loop
+                            muted
+                            playsInline
+                            controls
+                            className="w-full h-auto"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  )}
                   {section.chartId && <ChartBlock chartId={section.chartId} onOpenImage={(imgs, i) => openLightbox(imgs, i)} />}
-                  {section.image && !section.image2 && (
+                  {!section.blocks && section.image && !section.image2 && (
                     <button
                       onClick={() => openLightbox([section.image!])}
                       className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
@@ -227,12 +231,35 @@ function CaseStudyPage() {
                       </div>
                     </button>
                   )}
-                  {section.image && section.image2 && (
+                  {!section.blocks && section.image && section.image2 && (
                     <div className="grid grid-cols-2 gap-4">
                       {[section.image, section.image2].map((src, i) => (
                         <button
                           key={i}
                           onClick={() => openLightbox([section.image!, section.image2!], i)}
+                          className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
+                          style={{ boxShadow: "var(--shadow-card)" }}
+                          aria-label="View full image"
+                        >
+                          <img
+                            src={src}
+                            alt={`${section.heading} ${i + 1}`}
+                            loading="lazy"
+                            className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                          />
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
+                            <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {!section.blocks && section.images && section.images.length > 0 && (
+                    <div className={`grid gap-4 ${section.images.length === 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 sm:grid-cols-3"}`}>
+                      {section.images.map((src, i) => (
+                        <button
+                          key={i}
+                          onClick={() => openLightbox(section.images!, i)}
                           className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
                           style={{ boxShadow: "var(--shadow-card)" }}
                           aria-label="View full image"
@@ -1515,6 +1542,93 @@ function VideoOverlay({ src, onClose }: { src: string | null; onClose: () => voi
         </motion.div>
       )}
     </AnimatePresence>
+  );
+}
+
+function BlocksRenderer({ blocks, heading, onOpenImage }: { blocks: SectionBlock[]; heading: string; onOpenImage: (images: string[], index?: number) => void }) {
+  return (
+    <div className="space-y-8">
+      {blocks.map((block, i) => {
+        if (block.type === "text") {
+          return (
+            <div key={i} className="text-lg leading-[1.8] text-foreground/80 space-y-5">
+              {block.content.split("\n\n").map((para, j) => (
+                <p key={j}>{para}</p>
+              ))}
+            </div>
+          );
+        }
+        if (block.type === "bullets") {
+          return (
+            <ul key={i} className="space-y-3">
+              {block.items.map((item, j) => (
+                <li key={j} className="flex gap-3 text-lg leading-[1.75] text-foreground/80">
+                  <span className="mt-[0.45em] size-1.5 rounded-full shrink-0" style={{ background: "var(--gold)" }} />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        if (block.type === "numbered") {
+          return (
+            <ol key={i} className="space-y-4">
+              {block.items.map((item, j) => (
+                <li key={j} className="flex gap-4 text-lg leading-[1.75] text-foreground/80">
+                  <span className="shrink-0 font-display text-2xl leading-none text-accent/60 w-6 text-right">{j + 1}</span>
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ol>
+          );
+        }
+        if (block.type === "callout") {
+          return (
+            <blockquote key={i} className="relative pl-5 py-4 pr-4 rounded-r-xl" style={{ borderLeft: "3px solid var(--gold)", background: "color-mix(in oklab, var(--surface) 60%, transparent)" }}>
+              <p className="text-lg leading-[1.75] text-primary font-medium italic">{block.content}</p>
+            </blockquote>
+          );
+        }
+        if (block.type === "image") {
+          return (
+            <button
+              key={i}
+              onClick={() => onOpenImage([block.src])}
+              className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
+              style={{ boxShadow: "var(--shadow-card)" }}
+              aria-label="View full image"
+            >
+              <img src={block.src} alt={heading} loading="lazy" className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]" />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
+                <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+              </div>
+            </button>
+          );
+        }
+        if (block.type === "images") {
+          const cols = block.srcs.length === 3 ? "grid-cols-1 sm:grid-cols-3" : "grid-cols-2 sm:grid-cols-3";
+          return (
+            <div key={i} className={`grid gap-4 ${cols}`}>
+              {block.srcs.map((src, j) => (
+                <button
+                  key={j}
+                  onClick={() => onOpenImage(block.srcs, j)}
+                  className="group w-full text-left rounded-2xl overflow-hidden bg-white relative block"
+                  style={{ boxShadow: "var(--shadow-card)" }}
+                  aria-label="View full image"
+                >
+                  <img src={src} alt={`${heading} ${j + 1}`} loading="lazy" className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.02]" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300 rounded-2xl flex items-center justify-center">
+                    <ZoomIn className="size-8 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-lg" />
+                  </div>
+                </button>
+              ))}
+            </div>
+          );
+        }
+        return null;
+      })}
+    </div>
   );
 }
 

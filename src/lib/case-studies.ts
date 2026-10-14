@@ -1,3 +1,11 @@
+export type SectionBlock =
+  | { type: "text"; content: string }
+  | { type: "image"; src: string }
+  | { type: "images"; srcs: string[] }
+  | { type: "bullets"; items: string[] }
+  | { type: "numbered"; items: string[] }
+  | { type: "callout"; content: string };
+
 export interface CaseStudy {
   id: string;
   title: string;
@@ -8,7 +16,7 @@ export interface CaseStudy {
   company: string;
   heroImage: string;
   overview: string;
-  sections: { heading: string; body: string; image?: string; image2?: string; chartId?: string; video?: string }[];
+  sections: { heading: string; body?: string; blocks?: SectionBlock[]; image?: string; image2?: string; images?: string[]; chartId?: string; video?: string }[];
   stats?: { value: string; label: string }[];
   quote?: { text: string; attribution: string };
 }
@@ -25,7 +33,7 @@ export const caseStudies: CaseStudy[] = [
     company: "Meltwater",
     heroImage: "/smart-alerts-preview.jpg",
     overview:
-      "Smart Alerts are a core Meltwater feature that automatically notify users about brand mentions, sentiment changes, industry events, and social engagement. Over time the alert ecosystem became increasingly complex — users struggled to understand the differences between alerts, the creation process was hard to navigate, and the management interface made it difficult to find or edit alerts. I led the redesign of two key parts: the Alert Picker (where users create alerts) and the Alerts Homepage (where users manage them). The goal was to simplify the system while supporting two very different user groups: self-serve users and Sales representatives managing enterprise clients.",
+      "Meltwater is an enterprise media intelligence platform that helps companies monitor media coverage, brand reputation, competitors, and industry trends. Smart Alerts is a notification system within the platform that helps users stay informed about important events without constantly checking their dashboards or search results. For example, a PR professional might want to know when there's an unusual spike in brand mentions, a sudden shift in sentiment, or a conversation gaining significant attention.",
     stats: [
       { value: "9%", label: "CES score improvement" },
       { value: "18%", label: "Faster alert creation" },
@@ -33,22 +41,134 @@ export const caseStudies: CaseStudy[] = [
     ],
     sections: [
       {
-        heading: "The Problem",
-        body: "User feedback consistently highlighted confusion in the Alert Picker. The page contained long descriptions for each alert type, forcing users to read through dense explanations before making a decision. Users had no way to preview what an alert would actually look like once created. In parallel, Sales representatives frequently create multiple alerts for the same search for VIP clients, while most regular users only create a few for their own monitoring — creating a tension between speed for Sales and simplicity for users.",
-      },
-      {
-        heading: "Solution: Alerts Homepage",
+        heading: "The Problem — Why Redesign Smart Alerts?",
         body: "",
-        chartId: "smart-alerts-homepage",
+        blocks: [
+          { type: "text", content: "Over time, Smart Alerts had evolved into a fairly complex product. New alert types had been added as new capabilities were introduced, but the overall experience hadn't evolved in the same way." },
+          { type: "image", src: "/sa-alerts-structure.png" },
+          { type: "text", content: "As a result, users faced several challenges:" },
+          { type: "bullets", items: [
+            "It wasn't always clear which alert type to choose. Some alerts had overlapping functionality, and their descriptions weren't particularly helpful.",
+            "Alert configuration could be complicated, especially for users unfamiliar with the differences between alert types.",
+            "Alert relevance was a concern — users weren't always receiving information they found useful or actionable.",
+          ]},
+          { type: "text", content: "So this wasn't simply a visual redesign. We wanted to improve how users discovered, created, and managed alerts, while helping them receive information that was genuinely valuable." },
+          { type: "callout", content: "How might we make a sophisticated alerting system easier to understand and configure while preserving the flexibility different users need?" },
+        ],
       },
       {
-        heading: "Solution: Alert Picker",
-        body: "Balancing the needs of Sales and end users required a contextual solution. Rather than supporting multi-alert creation everywhere, we aligned functionality with actual workflows: the Alert page supports single alert creation (simpler for users), while the Explore page supports multi-alert creation (faster for Sales). This preserved efficiency for Sales teams while significantly reducing confusion for self-serve users.",
-        chartId: "smart-alerts-solution",
+        heading: "Discovery — What We Learned",
+        body: "",
+        blocks: [
+          { type: "text", content: "I started by reviewing existing user feedback, conducting research, and evaluating the current experience.\n\nOne of our research activities was a user survey, which helped us understand why people were using alerts:" },
+          { type: "bullets", items: [
+            "Brand monitoring — most common use case, mentioned by 68% of respondents",
+            "Crisis preparation — second most common, mentioned by 57%",
+          ]},
+          { type: "text", content: "Every Mention and Spike Detection were among the primary alert types supporting those needs.\n\nWe also learned that users wanted more clarity around alert selection and better control over relevance. Alongside the survey, we conducted interviews, heuristic evaluations, and design reviews to identify usability issues, inconsistencies, and unnecessary complexity." },
+          { type: "images", srcs: ["/sa-survey-slide1.png", "/sa-survey-slide2.png", "/sa-survey-slide3.png", "/sa-survey-slide4.png", "/sa-survey-slide5.png", "/sa-survey-slide6.png"] },
+          { type: "text", content: "Based on those findings, we identified several opportunities:" },
+          { type: "bullets", items: [
+            "Clearly distinguish Smart Alerts from System Alerts.",
+            "Organize alert types into meaningful groups.",
+            "Provide examples so users could understand what each alert would deliver.",
+            "Reduce overlapping functionality by consolidating similar alert types.",
+            "Give users better control over thresholds and notification frequency.",
+            "Make notifications easier to understand through clearer explanations and AI-generated summaries.",
+          ]},
+          { type: "text", content: "However, we couldn't implement everything at once. Some improvements were relatively straightforward, while others required significant backend changes or could affect existing user workflows. That led us to a phased approach." },
+        ],
       },
       {
-        heading: "Outcomes",
-        body: "CES score improved by 9% after simplifying alert selection logic. Time to create an alert decreased by 18% due to clearer alert grouping and preview examples. Alert discovery time reduced by 22% after introducing search in the management table. Users reported higher confidence when selecting alert types. Reduced internal support requests related to alert setup by ~15%. The patterns introduced were later adopted into the broader design system.\n\nKey design lessons: Structural clarity (grouping + separation) is more powerful than visual polish. Trade-offs must align with primary user goals. Preview examples significantly increase perceived value in configuration-heavy tools.",
+        heading: "Strategy — Prioritizing Improvements",
+        body: "",
+        blocks: [
+          { type: "text", content: "We organized the redesign into three stages:" },
+          { type: "numbered", items: [
+            "Structural improvements deliverable quickly: separating Smart and System Alerts, improving navigation and grouping, introducing search, and adding examples to the alert picker.",
+            "Consolidating overlapping alert types — more complex because it involved changes to existing functionality and could affect users who depended on specific alerts.",
+            "Advanced filtering and configuration improvements.",
+          ]},
+          { type: "text", content: "We intentionally postponed some filtering work until after the alert taxonomy was finalized. Otherwise, we risked investing engineering effort into a structure that we already knew might change. This sequencing helped us deliver improvements incrementally while managing technical complexity and implementation risk." },
+        ],
+      },
+      {
+        heading: "Design Decisions: Alerts Structure & Navigation",
+        body: "",
+        blocks: [
+          { type: "text", content: "One of the first issues we identified was that System Alerts and Smart Alerts appeared together, even though they served very different purposes." },
+          { type: "image", src: "/sa-slide-system-alerts.png" },
+          { type: "bullets", items: [
+            "Smart Alerts analyze monitored information to identify meaningful events or changes, such as spikes in coverage or sentiment shifts.",
+            "System Alerts communicate operational information, such as account or system-related updates.",
+          ]},
+          { type: "text", content: "From a user's perspective, these are different mental models, so grouping them together created unnecessary confusion.\n\nWe explored several approaches. One option was to move System Alerts into account settings. Another was to place them closer to the product areas that generated them. However, those approaches introduced complications around data structure, ownership, and ongoing maintenance.\n\nAfter discussions with product leadership and engineering, we decided to keep both under the broader Alerts area but separate them into distinct tabs. This aligned well with improvements happening in our design system, where we had recently introduced updated table and tab patterns.\n\nIt wasn't the most radical solution, but it provided a clear improvement with relatively low implementation cost. The important tradeoff was balancing an ideal information architecture with the technical and organizational constraints of the existing product." },
+          { type: "image", src: "/sa-alerts-page-changes.jpg" },
+          { type: "text", content: "Once we separated System Alerts, we focused on the Smart Alerts management experience. We reorganized navigation by grouping alerts according to their input types and placing the most commonly used alerts prominently within each group.\n\nWe also considered introducing an All Alerts view. However, different alert types relied on different inputs and underlying data structures. Combining them into one view would have required substantial backend work. Research also suggested users didn't have a strong need for a unified view — so we decided not to introduce additional complexity without a clear user benefit.\n\nAnother important improvement was search. Previously, users had no dedicated search functionality in the management table. Some relied on their browser's Find command, and locating a specific alert could take considerable time." },
+          { type: "callout", content: "The key decision was to prioritize faster access to relevant alerts rather than building a more technically expensive universal view." },
+        ],
+      },
+      {
+        heading: "Design Decisions: Alert Picker & Selection",
+        body: "",
+        blocks: [
+          { type: "text", content: "Over time, every new alert type had simply been added to the existing list. Eventually, that list became difficult to scan, and users struggled to understand the differences between alerts.\n\nOur research revealed two particularly important needs:" },
+          { type: "bullets", items: [
+            "Users wanted shorter, clearer descriptions.",
+            "They wanted to see examples of what they would actually receive before choosing an alert.",
+          ]},
+          { type: "text", content: "Ideally, users would have liked to preview alerts using their own search data. However, generating those previews dynamically wasn't technically feasible at the time. So we explored a more practical alternative." },
+          { type: "image", src: "/sa-view-example.jpg" },
+          { type: "text", content: "We grouped alert types by input, simplified their descriptions, and introduced static examples showing what the resulting notifications would look like. We created a fictional company and monitoring scenario so examples remained consistent across alert types. Email was chosen as the primary preview format — the most widely used delivery channel, supporting all alert types, with greater control over presentation than third-party platforms.\n\nAnother challenge emerged during the redesign of the alert picker. Initially, we were trying to accommodate two different user behaviors within the same selection experience." },
+          { type: "image", src: "/sa-alert-selection.png" },
+          { type: "bullets", items: [
+            "Individual users generally created relatively few alerts and tended to use a consistent set of alert types.",
+            "Sales representatives managing enterprise accounts often needed to create multiple alerts for the same searches and distribute them to many recipients.",
+            "Exceptional high-volume scenarios — such as monitoring the Olympic Games — created demand for bulk creation.",
+          ]},
+          { type: "text", content: "Our initial approach tried to accommodate both single and multiple selection within the same experience. But that introduced unnecessary complexity and negatively affected the Customer Effort Score.\n\nSo we revisited the problem and looked more closely at where different users were starting their workflows. Sales representatives typically created search-based alerts directly from the Explore page. Individual users were more likely to start from the Alerts page. That insight changed our approach — instead of forcing both behaviors into one interface, we separated them based on context." },
+          { type: "image", src: "/sa-create-alert.png" },
+          { type: "text", content: "From the Explore page, users could create multiple search-based alerts. From the Alerts page, the picker supported a simpler single-selection experience. This preserved functionality for high-volume users while making the primary experience much easier to understand." },
+          { type: "callout", content: "After simplifying the selection logic, the Customer Effort Score improved by 9%. It was a good example of how understanding user behavior can lead to a simpler solution than adding more interface controls." },
+        ],
+      },
+      {
+        heading: "Results — Measuring Impact",
+        body: "",
+        blocks: [
+          { type: "text", content: "The redesign delivered several measurable improvements:" },
+          { type: "bullets", items: [
+            "Customer Effort Score improved by 9% after simplifying alert selection.",
+            "Alert creation time decreased by 18%.",
+            "Alert discovery time decreased by 22% after introducing search.",
+            "Internal support requests related to alert setup decreased by approximately 15%.",
+          ]},
+          { type: "text", content: "We also received feedback indicating that users felt more confident selecting alert types, particularly with the addition of preview examples." },
+          { type: "callout", content: "One of the most important outcomes was demonstrating that structural improvements — better grouping, clearer navigation, and more context-aware workflows — could have a greater impact than simply polishing the interface." },
+        ],
+      },
+      {
+        heading: "Beyond the Redesign — Consolidating Alert Types",
+        body: "",
+        blocks: [
+          { type: "text", content: "After the initial improvements, we continued exploring how to simplify the product at a deeper level. We organized a workshop using research findings, heuristic evaluation results, and alert usage data to identify consolidation opportunities:" },
+          { type: "bullets", items: [
+            "Industry Events and Company Events — a potential low-risk consolidation due to relatively low usage.",
+            "Top Reach and X Influencers — explored for combining through source filtering, since they offered similar functionality across different sources.",
+            "Breakout Post and Page Engagement — required more investigation due to possible API constraints and overlap with other alerts.",
+          ]},
+          { type: "text", content: "We didn't want to consolidate features simply because they looked similar. We needed to understand whether they served distinct user needs, how frequently they were used, and what technical implications consolidation would create. Our approach was to start with lower-risk opportunities, learn from those changes, and then evaluate more complicated cases." },
+        ],
+      },
+      {
+        heading: "Reflection — What Would I Do Differently?",
+        body: "",
+        blocks: [
+          { type: "text", content: "Looking back, one area I'd explore further is moving from a feature-based alert creation experience toward a more goal-oriented one. We made significant improvements to the existing structure, but users still needed to understand the differences between alert types.\n\nToday, I'd explore a simpler framework organized around three questions: What do you want to monitor? When do you want to be notified? How do you want to receive the information?" },
+          { type: "image", src: "/sa-long-term-example.jpg" },
+          { type: "text", content: "That could make the experience more intuitive, particularly for users who aren't familiar with the underlying alert taxonomy. I'd also investigate whether AI could help recommend relevant alert configurations based on a user's goals, monitoring context, or previous behavior. Another opportunity would be giving users better control over notification frequency and helping them understand whether their alerts are producing useful signals." },
+          { type: "callout", content: "My biggest takeaway: simplifying a complex product doesn't always mean removing functionality. Sometimes the most effective solution is understanding different user behaviors and designing the right experience for each context." },
+        ],
       },
     ],
   },
