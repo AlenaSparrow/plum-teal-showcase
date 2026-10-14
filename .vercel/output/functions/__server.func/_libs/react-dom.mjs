@@ -1,4 +1,6 @@
 import { a as requireReact, g as getDefaultExportFromCjs } from "./react.mjs";
+var server_bun = {};
+var reactDomServer_bun_production = {};
 var reactDom = { exports: {} };
 var reactDom_production = {};
 var hasRequiredReactDom_production;
@@ -168,9 +170,6 @@ function requireReactDom() {
   }
   return reactDom.exports;
 }
-requireReactDom();
-var server_bun = {};
-var reactDomServer_bun_production = {};
 var hasRequiredReactDomServer_bun_production;
 function requireReactDomServer_bun_production() {
   if (hasRequiredReactDomServer_bun_production) return reactDomServer_bun_production;

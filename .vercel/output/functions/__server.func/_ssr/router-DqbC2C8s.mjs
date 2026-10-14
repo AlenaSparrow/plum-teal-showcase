@@ -1,16 +1,15 @@
 import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
 import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
 import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent } from "../_libs/tanstack__react-router.mjs";
-import { H as notFound } from "../_libs/tanstack__router-core.mjs";
+import { V as notFound } from "../_libs/tanstack__router-core.mjs";
 import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
 import "../_libs/react-dom.mjs";
 import "node:stream";
 import "../_libs/isbot.mjs";
 import "../_libs/tanstack__history.mjs";
-import "../_libs/cookie-es.mjs";
 import "../_libs/seroval.mjs";
+import "../_libs/cookie-es.mjs";
 import "../_libs/seroval-plugins.mjs";
-import "node:stream/web";
 const appCss = "/assets/styles-DAWPcsMg.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
@@ -119,11 +118,11 @@ function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
 const $$splitComponentImporter$7 = () => import("./work-BFsOu0JM.mjs");
-const Route$7 = createFileRoute("/work")({
+const Route$7 = createFileRoute()({
   component: lazyRouteComponent($$splitComponentImporter$7, "component")
 });
 const $$splitComponentImporter$6 = () => import("./contact-PCzSNYFa.mjs");
-const Route$6 = createFileRoute("/contact")({
+const Route$6 = createFileRoute()({
   head: () => ({
     meta: [{
       title: "Contact — Alena Vorobiev"
@@ -146,7 +145,7 @@ const Route$6 = createFileRoute("/contact")({
   component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
 const $$splitComponentImporter$5 = () => import("./about-D-0Q-4-r.mjs");
-const Route$5 = createFileRoute("/about")({
+const Route$5 = createFileRoute()({
   head: () => ({
     meta: [{
       title: "About — Alena Vorobiev"
@@ -169,7 +168,7 @@ const Route$5 = createFileRoute("/about")({
   component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
 const $$splitComponentImporter$4 = () => import("./index-B8xlbtaF.mjs");
-const Route$4 = createFileRoute("/")({
+const Route$4 = createFileRoute()({
   head: () => ({
     meta: [{
       title: "Alena Vorobiev — UX Designer"
@@ -201,7 +200,7 @@ const Route$4 = createFileRoute("/")({
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
 const $$splitComponentImporter$3 = () => import("./index-CFeEaAl2.mjs");
-const Route$3 = createFileRoute("/work/")({
+const Route$3 = createFileRoute()({
   head: () => ({
     meta: [{
       title: "Work — Alena Vorobiev"
@@ -224,7 +223,7 @@ const Route$3 = createFileRoute("/work/")({
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
 const $$splitComponentImporter$2 = () => import("./index-AYzIfFcX.mjs");
-const Route$2 = createFileRoute("/articles/")({
+const Route$2 = createFileRoute()({
   head: () => ({
     meta: [{
       title: "Writing — Alena Vorobiev"
@@ -642,7 +641,7 @@ function getCaseStudy(id) {
   return caseStudies.find((cs) => cs.id === id);
 }
 const $$splitComponentImporter$1 = () => import("../_id-B1u4ZorB.mjs");
-const Route$1 = createFileRoute("/work/$id")({
+const Route$1 = createFileRoute()({
   head: ({
     params
   }) => {
@@ -1070,7 +1069,7 @@ const articles = [
   }
 ];
 const $$splitComponentImporter = () => import("../_slug-D-iDMj_f.mjs");
-const Route = createFileRoute("/articles/$slug")({
+const Route = createFileRoute()({
   head: ({
     params
   }) => {
